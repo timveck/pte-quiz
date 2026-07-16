@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTE Academic 2026 · Day 1 – Getting Your Bearings</title>
+    <style>
+        /* –––––––––––––––––– RESET & ROOT –––––––––––––––––– */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --pearson-blue: #047a9c;
+            --ink-blue: #005a70;
+            --ice-blue: #daf0ed;
+            --turquoise: #19a5a3;
+            --sunshine: #ffb81c;
+            --sunflower: #ff9a19;
+            --white: #ffffff;
+            --white-gray: #f5f5f5;
+            --moonlight: #ededed;
+            --charcoal: #252525;
+            --graphite: #505759;
+            --medium-gray: #6a7070;
+            --concrete: #c9cccc;
+            --success: #1f8a4c;
+            --success-bg: #e7f5ec;
+            --danger: #c23934;
+            --danger-bg: #fbebea;
+            --font: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+    font-size: 17px;
+            font-family: var(--font);
+            background: var(--white-gray);
+            color: var(--charcoal);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.5;
+        }
+
+        a {
+            color: var(--pearson-blue);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 28px 24px 60px;
+        }
+
+        /* –––––––––––––––––– TOP BAR –––––––––––––––––– */
+        .topbar {
+            background: var(--pearson-blue);
+            color: var(--white);
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 20.5px;
+        }
+
+        .logo-mark {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--sunshine);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 16px;
+        }
+
+        .topbar-right a {
+            color: var(--white);
+            opacity: 0.85;
+        }
+        .topbar-right a:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        /* –––––––––––––––––– HERO / BANNER –––––––––––––––––– */
+        .hero {
+            background: linear-gradient(120deg, var(--ink-blue) 0%, var(--pearson-blue) 100%);
+            color: var(--white);
+            border-radius: 8px;
+            padding: 32px 32px 28px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 4px;
+        }
+
+        .hero .sub {
+            font-size: 18.5px;
+            opacity: 0.9;
+            font-weight: 400;
+            margin: 0 0 8px;
+        }
+
+        .hero .meta {
+            font-size: 16px;
+            opacity: 0.8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 6px;
+        }
+
+        .hero .meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* –––––––––––––––––– SECTION CARD –––––––––––––––––– */
+        .section-card {
+            background: var(--white);
+            border: 1px solid var(--concrete);
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-bottom: 22px;
+            transition: box-shadow 0.15s;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        .section-card .heading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .section-card .heading .badge {
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            background: var(--moonlight);
+            color: var(--graphite);
+        }
+
+        .section-card .heading .badge-blue {
+            background: var(--ice-blue);
+            color: var(--ink-blue);
+        }
+
+        .section-card .heading .badge-gold {
+            background: #fff2d9;
+            color: #8a5a00;
+        }
+
+        .section-card .heading .badge-turq {
+            background: #e6f3f2;
+            color: var(--turquoise);
+        }
+
+        .section-card h2 {
+            font-size: 23px;
+            font-weight: 700;
+            margin: 0 0 2px;
+            color: var(--charcoal);
+        }
+
+        .section-card h3 {
+            font-size: 18.5px;
+            font-weight: 600;
+            margin: 16px 0 6px;
+            color: var(--charcoal);
+        }
+
+        .section-card p,
+        .section-card li {
+            color: var(--graphite);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .section-card ul,
+        .section-card ol {
+            padding-left: 22px;
+            margin: 6px 0 8px;
+        }
+
+        .section-card li {
+            margin-bottom: 4px;
+        }
+
+        .section-card .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .section-card .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section-card .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 700px) {
+            .section-card .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 450px) {
+            .section-card .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pill {
+            display: inline-block;
+            background: var(--moonlight);
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--graphite);
+        }
+
+        .pill-blue {
+            background: var(--ice-blue);
+            color: var(--ink-blue);
+        }
+
+        .pill-gold {
+            background: #fff2d9;
+            color: #8a5a00;
+        }
+
+        .pill-green {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .pill-turq {
+            background: #e6f3f2;
+            color: var(--turquoise);
+        }
+
+        /* –––––– priority table –––––– */
+        .priority-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 12px 0 4px;
+        }
+
+        @media (max-width: 700px) {
+            .priority-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 450px) {
+            .priority-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .priority-card {
+            background: var(--white-gray);
+            border-radius: 6px;
+            padding: 14px 16px;
+            border-left: 4px solid var(--concrete);
+        }
+
+        .priority-card.high {
+            border-left-color: var(--pearson-blue);
+            background: var(--ice-blue);
+        }
+
+        .priority-card.top {
+            border-left-color: var(--sunshine);
+            background: #fff9e6;
+        }
+
+        .priority-card .label {
+            font-size: 12.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: var(--medium-gray);
+        }
+
+        .priority-card ul {
+            padding-left: 18px;
+            margin: 6px 0 0;
+        }
+
+        .priority-card ul li {
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 1px;
+        }
+
+        /* –––––– 22 types grid –––––– */
+        .type-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px 20px;
+            margin: 10px 0 4px;
+        }
+
+        @media (max-width: 700px) {
+            .type-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 450px) {
+            .type-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .type-grid .group-label {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--charcoal);
+            grid-column: 1 / -1;
+            margin-top: 6px;
+            border-bottom: 1px solid var(--moonlight);
+            padding-bottom: 4px;
+        }
+
+        .type-grid .item {
+            font-size: 15px;
+            color: var(--graphite);
+            padding: 2px 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .type-grid .item .dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--concrete);
+            flex-shrink: 0;
+        }
+
+        /* –––––– warm-up cards –––––– */
+        .warmup {
+            background: var(--white-gray);
+            border-radius: 6px;
+            padding: 18px 20px;
+            border: 1px solid var(--moonlight);
+        }
+
+        .warmup .timer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--charcoal);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 14px;
+            padding: 3px 12px;
+            border-radius: 14px;
+            margin-bottom: 8px;
+        }
+
+        .warmup .coach-tip {
+            background: var(--ice-blue);
+            border-radius: 4px;
+            padding: 10px 14px;
+            font-size: 15px;
+            color: var(--ink-blue);
+            margin-top: 10px;
+            border-left: 3px solid var(--pearson-blue);
+        }
+
+        /* –––––– divider –––––– */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--moonlight);
+            margin: 18px 0 16px;
+        }
+
+        /* –––––– roadmap –––––– */
+        .roadmap {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 12px 0 4px;
+        }
+
+        .roadmap .step {
+            background: var(--white-gray);
+            border-radius: 6px;
+            padding: 12px 16px;
+            flex: 1 0 160px;
+            border: 1px solid var(--moonlight);
+        }
+
+        .roadmap .step .day {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--charcoal);
+        }
+
+        .roadmap .step .desc {
+            font-size: 15px;
+            color: var(--medium-gray);
+        }
+
+        .roadmap .step.active {
+            background: #fff9e6;
+            border-color: var(--sunshine);
+        }
+
+        .roadmap .step.active .day {
+            color: #8a5a00;
+        }
+
+        /* –––––– footer –––––– */
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: var(--medium-gray);
+            padding: 18px 10px 6px;
+            border-top: 1px solid var(--moonlight);
+            margin-top: 18px;
+        }
+
+        /* –––––– utils –––––– */
+        .text-sm {
+            font-size: 15px;
+            color: var(--medium-gray);
+        }
+
+        .mt-8 {
+            margin-top: 8px;
+        }
+
+        .mt-12 {
+            margin-top: 12px;
+        }
+
+        .mb-6 {
+            margin-bottom: 6px;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .flex .gap-4 {
+            gap: 4px;
+        }
+
+        .inline-code {
+            background: var(--moonlight);
+            padding: 1px 8px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <header class="topbar">
+        <div class="logo">
+            <span class="logo-mark">P</span>
+            PTE Academic 2026
+        </div>
+        <div class="topbar-right">
+            <span>Day 1 · Getting Your Bearings</span>
+            <a href="#">Coach Guide</a>
+        </div>
+    </header>
+
+    <!-- ===== PAGE ===== -->
+    <div class="page">
+
+        <!-- HERO -->
+        <div class="hero">
+            <h1>Getting Your Bearings</h1>
+            <div class="sub">A calm, practical orientation for home prep</div>
+            <div class="meta">
+                <span>⏱️ Coach-guided · ~20–30 min</span>
+                <span>📘 4‑day plan · Day 1 of 4</span>
+            </div>
+        </div>
+
+        <!-- ===== 1. THE BIG PICTURE ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>The Big Picture</h2>
+                <span class="badge badge-blue">What to expect</span>
+            </div>
+            <ul>
+                <li><strong>About 2 hours</strong> – one test, one sitting. No scheduled break; if you need one, raise your hand, but the clock keeps running.</li>
+                <li><strong>Fixed order</strong> – Speaking &amp; Writing first, then Reading, then Listening. You cannot skip or reorder sections.</li>
+                <li><strong>22 question types</strong> – you'll practice every one of them over the next three days. Today is just the map.</li>
+            </ul>
+            <div class="text-sm mt-8">Source: <a href="#">pearsonpte.com/pte-academic/test-format</a></div>
+        </div>
+
+        <!-- ===== 2. STRUCTURE ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Structure — The Three Parts</h2>
+                <span class="badge badge-gold">How it breaks down</span>
+            </div>
+            <p>This is roughly a third of the old 3‑hour test's length — the 2026 format is shorter and more focused.</p>
+            <div class="grid-3" style="margin-top:12px;">
+                <div style="background:var(--ice-blue);padding:14px 16px;border-radius:6px;">
+                    <strong style="color:var(--ink-blue);">Part 1</strong>
+                    <div style="font-size:16px;color:var(--graphite);">Speaking &amp; Writing</div>
+                </div>
+                <div style="background:var(--moonlight);padding:14px 16px;border-radius:6px;">
+                    <strong style="color:var(--charcoal);">Part 2</strong>
+                    <div style="font-size:16px;color:var(--graphite);">Reading</div>
+                </div>
+                <div style="background:var(--moonlight);padding:14px 16px;border-radius:6px;">
+                    <strong style="color:var(--charcoal);">Part 3</strong>
+                    <div style="font-size:16px;color:var(--graphite);">Listening</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 3. SCORING ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>How You're Marked</h2>
+                <span class="badge badge-turq">AI + human review</span>
+            </div>
+            <ul>
+                <li><strong>AI scores every task</strong> – all 22 task types are scored by Pearson's AI system. The algorithm evaluates your responses against thousands of scored samples.</li>
+                <li>Results delivered in about <strong>48 hours</strong>. Scores are valid for <strong>two years</strong>.</li>
+                <li><strong>Human expert review</strong> – six tasks get a second look before your score is final:
+                    <ul>
+                        <li>Describe Image · Retell Lecture · Summarize Group Discussion</li>
+                        <li>Respond to a Situation · Write Essay · Summarize Spoken Text</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="text-sm mt-8">Source: <a href="#">pearsonpte.com/pte-academic/scoring</a></div>
+        </div>
+
+        <!-- ===== 4. WHAT'S NEW ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>What's New Since 2025</h2>
+                <span class="badge badge-gold">Two new speaking tasks</span>
+            </div>
+            <p>The 2026 test adds two new speaking tasks. Both reward natural conversation — not memorised scripts.</p>
+
+            <div class="grid-2" style="margin-top:12px;">
+                <div style="background:#fff9e6;border-radius:6px;padding:16px 18px;border-left:4px solid var(--sunshine);">
+                    <div style="font-weight:700;font-size:17px;">Respond to a Situation</div>
+                    <p style="font-size:15px;margin:4px 0 6px;">You'll hear a short scenario and respond as if you're in it. Natural, spontaneous speech — not rehearsed.</p>
+                    <span class="pill pill-gold">Human-reviewed</span>
+                </div>
+                <div style="background:#fff9e6;border-radius:6px;padding:16px 18px;border-left:4px solid var(--sunshine);">
+                    <div style="font-weight:700;font-size:17px;">Summarize Group Discussion</div>
+                    <p style="font-size:15px;margin:4px 0 6px;">Listen to a group conversation and summarise what was discussed. Tests listening comprehension and concise expression.</p>
+                    <span class="pill pill-gold">Human-reviewed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 5. ALL 22 QUESTION TYPES ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>All 22 Question Types, at a Glance</h2>
+                <span class="badge badge-blue">Reference</span>
+            </div>
+            <p class="text-sm">Every task you'll practise over the next three days falls into one of these 22 types. You don't need to remember this list — just see the shape of it.</p>
+
+            <div class="type-grid">
+                <div class="group-label">Speaking and Writing (9)</div>
+                <div class="item"><span class="dot"></span> Read Aloud</div>
+                <div class="item"><span class="dot"></span> Repeat Sentence</div>
+                <div class="item"><span class="dot"></span> Describe Image</div>
+                <div class="item"><span class="dot"></span> Retell Lecture</div>
+                <div class="item"><span class="dot"></span> Answer Short Question</div>
+                <div class="item"><span class="dot"></span> Summarize Group Discussion</div>
+                <div class="item"><span class="dot"></span> Respond to a Situation</div>
+                <div class="item"><span class="dot"></span> Summarize Written Text</div>
+                <div class="item"><span class="dot"></span> Write Essay</div>
+
+                <div class="group-label">Reading (5)</div>
+                <div class="item"><span class="dot"></span> Fill in the Blanks (Dropdown)</div>
+                <div class="item"><span class="dot"></span> Multiple Choice – Multiple Answers</div>
+                <div class="item"><span class="dot"></span> Reorder Paragraph</div>
+                <div class="item"><span class="dot"></span> Fill in the Blanks (Drag and Drop)</div>
+                <div class="item"><span class="dot"></span> Multiple Choice – Single Answer</div>
+
+                <div class="group-label">Listening (8)</div>
+                <div class="item"><span class="dot"></span> Summarize Spoken Text</div>
+                <div class="item"><span class="dot"></span> Multiple Choice – Multiple Answers</div>
+                <div class="item"><span class="dot"></span> Fill in the Blanks (Type In)</div>
+                <div class="item"><span class="dot"></span> Highlight Correct Summary</div>
+                <div class="item"><span class="dot"></span> Multiple Choice – Single Answer</div>
+                <div class="item"><span class="dot"></span> Select Missing Word</div>
+                <div class="item"><span class="dot"></span> Highlight Incorrect Words</div>
+                <div class="item"><span class="dot"></span> Write from Dictation</div>
+            </div>
+        </div>
+
+        <!-- ===== 6. PRIORITIES ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Where the Marks Are Concentrated</h2>
+                <span class="badge badge-gold">Practice-time guide</span>
+            </div>
+            <p class="text-sm">Not all 22 types carry equal weight. A few consistently come up as the ones to prioritise.</p>
+
+            <div class="priority-grid">
+                <div class="priority-card top">
+                    <div class="label">⭐ Highest Priority</div>
+                    <ul>
+                        <li>Repeat Sentence</li>
+                        <li>Read Aloud</li>
+                        <li>Write from Dictation</li>
+                        <li>Describe Image</li>
+                    </ul>
+                </div>
+                <div class="priority-card high">
+                    <div class="label">🔵 Also worth solid time</div>
+                    <ul>
+                        <li>Retell Lecture</li>
+                        <li>Summarize Written Text</li>
+                        <li>Summarize Group Discussion</li>
+                        <li>Summarize Spoken Text</li>
+                        <li>Highlight Incorrect Words</li>
+                    </ul>
+                </div>
+                <div class="priority-card">
+                    <div class="label">⚪ Lower Priority — quick pass</div>
+                    <ul>
+                        <li>Multiple Choice types</li>
+                        <li>Select Missing Word</li>
+                        <li>Highlight Correct Summary</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-sm mt-8">Exact scoring percentages vary by source and aren't published by Pearson in full. Treat this as a practice‑time guide, not a fixed formula.</div>
+        </div>
+
+        <!-- ===== 7. ACTIVITY — WARM-UP ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Live Warm‑Up</h2>
+                <span class="badge badge-turq">Feel the clock · No scoring</span>
+            </div>
+
+            <div class="grid-2">
+                <!-- Describe the Lounge -->
+                <div class="warmup">
+                    <div class="timer-badge">⏱️ 40s</div>
+                    <h3 style="margin:0 0 4px;font-size:18.5px;">Describe the Lounge</h3>
+                    <p style="font-size:15px;margin:0 0 6px;">Stand in the lounge. Set your phone timer to <strong>40 seconds</strong>.</p>
+                    <p style="font-size:15px;margin:0 0 6px;">Describe this room to a person who has never entered it. Cover the wall hangings, the seating, the floor, and the window light. Talk about the colours and the mood.</p>
+                    <p style="font-size:15px;font-style:italic;color:var(--medium-gray);">This is close to the real Describe Image task. No scoring, no pressure — just a feel for talking against a clock.</p>
+                    <div class="coach-tip">💡 Coach tip: If 40 seconds feels short, that's exactly the point. The real task feels the same way at first. You'll get used to it.</div>
+                </div>
+
+                <!-- Describe the Kitchen -->
+                <div class="warmup">
+                    <div class="timer-badge">⏱️ 40s · with ambient noise</div>
+                    <h3 style="margin:0 0 4px;font-size:18.5px;">Describe the Kitchen</h3>
+                    <p style="font-size:15px;margin:0 0 6px;">Stand in the kitchen. Play your chatter audio. Set your timer to <strong>40 seconds</strong>.</p>
+                    <p style="font-size:15px;margin:0 0 6px;">Describe this kitchen to a person who has never seen it. Cover the counters, the stove, the sink, and the cupboards. Note the light, the tiles, and the overall feel.</p>
+                    <p style="font-size:15px;font-style:italic;color:var(--medium-gray);">This mimics the real test room with other candidates speaking nearby. No scoring, just volume and focus against the clock.</p>
+                    <div class="coach-tip">💡 Coach tip: If 40 seconds feels short, that's exactly the point. The real task feels the same way at first. You'll get used to it.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 8. ROADMAP ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>What's Next — Your Four‑Day Plan</h2>
+                <span class="badge badge-blue">Roadmap</span>
+            </div>
+
+            <div class="roadmap">
+                <div class="step active">
+                    <div class="day">Day 1 · Today</div>
+                    <div class="desc">Getting Your Bearings — The map. The structure. The priorities. The warm‑up.</div>
+                    <span class="pill pill-gold" style="margin-top:4px;">● You are here</span>
+                </div>
+                <div class="step">
+                    <div class="day">Day 2 · Speaking</div>
+                    <div class="desc">All 9 Speaking and Writing task types, with practice for each.</div>
+                </div>
+                <div class="step">
+                    <div class="day">Day 3 · Writing &amp; Reading</div>
+                    <div class="desc">Writing tasks and all 5 Reading task types, with strategies.</div>
+                </div>
+                <div class="step">
+                    <div class="day">Day 4 · Listening</div>
+                    <div class="desc">All 8 Listening task types, then mock rounds before templates or strategy.</div>
+                </div>
+            </div>
+            <div class="text-sm mt-8">Questions? That's what the coach is here for.</div>
+        </div>
+
+        <footer>Demo page · not affiliated with or endorsed by Pearson · PTE Academic 2026 — Day 1</footer>
+    </div>
+
+</body>
+</html>

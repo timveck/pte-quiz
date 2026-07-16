@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTE 2026 – Vocabulary & Collocations (Collapsible)</title>
+    <style>
+        /* –––––––––––––––––– RESET & ROOT –––––––––––––––––– */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --pearson-blue: #047a9c;
+            --ink-blue: #005a70;
+            --ice-blue: #daf0ed;
+            --turquoise: #19a5a3;
+            --sunshine: #ffb81c;
+            --sunflower: #ff9a19;
+            --white: #ffffff;
+            --white-gray: #f5f5f5;
+            --moonlight: #ededed;
+            --charcoal: #252525;
+            --graphite: #505759;
+            --medium-gray: #6a7070;
+            --concrete: #c9cccc;
+            --success: #1f8a4c;
+            --success-bg: #e7f5ec;
+            --danger: #c23934;
+            --danger-bg: #fbebea;
+            --font: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --level-easy: #2e7d32;
+            --level-medium: #b76e00;
+            --level-hard: #b71c1c;
+            --level-easy-bg: #e8f5e9;
+            --level-medium-bg: #fff3e0;
+            --level-hard-bg: #ffebee;
+        }
+
+        body {
+    font-size: 17px;
+            font-family: var(--font);
+            background: var(--white-gray);
+            color: var(--charcoal);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.5;
+        }
+
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 28px 24px 60px;
+        }
+
+        /* –––––––––––––––––– TOP BAR –––––––––––––––––– */
+        .topbar {
+            background: var(--pearson-blue);
+            color: var(--white);
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 20.5px;
+        }
+
+        .logo-mark {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--sunshine);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 16px;
+        }
+
+        .topbar-right a {
+            color: var(--white);
+            opacity: 0.85;
+        }
+        .topbar-right a:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        /* –––––––––––––––––– HERO / BANNER –––––––––––––––––– */
+        .hero {
+            background: linear-gradient(120deg, var(--ink-blue) 0%, var(--pearson-blue) 100%);
+            color: var(--white);
+            border-radius: 8px;
+            padding: 32px 32px 28px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 4px;
+        }
+
+        .hero .sub {
+            font-size: 18.5px;
+            opacity: 0.9;
+            font-weight: 400;
+            margin: 0 0 8px;
+        }
+
+        .hero .meta {
+            font-size: 16px;
+            opacity: 0.8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 6px;
+        }
+
+        .hero .meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* –––––––––––––––––– SECTION CARD –––––––––––––––––– */
+        .section-card {
+            background: var(--white);
+            border: 1px solid var(--concrete);
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-bottom: 22px;
+            transition: box-shadow 0.15s;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        /* –––––––––––––––––– COLLAPSIBLE SECTIONS –––––––––––––––––– */
+        .section-toggle {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            background: var(--ice-blue);
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 18.5px;
+            color: var(--ink-blue);
+            margin-top: 16px;
+            transition: background 0.2s, box-shadow 0.2s;
+            border: 1px solid transparent;
+        }
+        .section-toggle:hover {
+            background: #c4e4e0;
+            border-color: var(--pearson-blue);
+        }
+        .section-toggle .arrow {
+            transition: transform 0.3s ease;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .section-toggle .arrow.open {
+            transform: rotate(90deg);
+        }
+        .section-toggle .badge {
+            margin-left: auto;
+            background: var(--white);
+            color: var(--charcoal);
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .section-toggle .badge-gold {
+            background: #fff2d9;
+            color: #8a5a00;
+        }
+        .section-toggle .badge-blue {
+            background: var(--ice-blue);
+            color: var(--ink-blue);
+        }
+        .section-toggle .badge-turq {
+            background: #e6f3f2;
+            color: var(--turquoise);
+        }
+
+        .collapsible {
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.3s ease;
+            max-height: 0;
+            padding: 0 4px;
+        }
+        .collapsible.open {
+            max-height: 9999px;
+            padding: 16px 4px 8px;
+        }
+
+        /* –––––––––––––––––– TABLE STYLES –––––––––––––––––– */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 10px 0 4px;
+            border-radius: 6px;
+            border: 1px solid var(--moonlight);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+            min-width: 700px;
+        }
+
+        table thead {
+            background: var(--ice-blue);
+            color: var(--ink-blue);
+        }
+
+        table th {
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border-bottom: 2px solid var(--concrete);
+            position: sticky;
+            top: 0;
+            background: var(--ice-blue);
+        }
+
+        table td {
+            padding: 9px 12px;
+            border-bottom: 1px solid var(--moonlight);
+            vertical-align: top;
+            color: var(--charcoal);
+        }
+
+        table tbody tr:hover {
+            background: var(--white-gray);
+        }
+
+        table .level-star {
+            font-weight: 700;
+            white-space: nowrap;
+            font-size: 15px;
+        }
+        table .level-star.easy {
+            color: var(--level-easy);
+        }
+        table .level-star.medium {
+            color: var(--level-medium);
+        }
+        table .level-star.hard {
+            color: var(--level-hard);
+        }
+
+        table .pos-tag {
+            display: inline-block;
+            background: var(--moonlight);
+            padding: 1px 8px;
+            border-radius: 4px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--graphite);
+        }
+
+        table .example {
+            color: var(--medium-gray);
+            font-style: italic;
+            font-size: 14.5px;
+        }
+
+        .table-wrap .note {
+            padding: 8px 12px;
+            font-size: 14px;
+            color: var(--medium-gray);
+            background: var(--white-gray);
+            border-top: 1px solid var(--moonlight);
+        }
+
+        /* –––––––––––––––––– COLLOCATION GRID –––––––––––––––––– */
+        .colloc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+            margin: 10px 0 4px;
+        }
+
+        @media (max-width: 600px) {
+            .colloc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .colloc-item {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            font-size: 15px;
+            padding: 4px 0;
+            border-bottom: 1px solid var(--moonlight);
+        }
+
+        .colloc-item .colloc-type {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--medium-gray);
+            background: var(--moonlight);
+            padding: 1px 8px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .colloc-item .colloc-pair {
+            font-weight: 500;
+            color: var(--charcoal);
+        }
+
+        .colloc-item .colloc-example {
+            font-size: 14px;
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+
+        /* –––––––––––––––––– QUICK REFERENCE –––––––––––––––––– */
+        .quick-ref {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 12px 0 4px;
+        }
+
+        @media (max-width: 700px) {
+            .quick-ref {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 450px) {
+            .quick-ref {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .quick-ref .level-box {
+            border-radius: 6px;
+            padding: 16px 18px;
+            border-left: 4px solid var(--concrete);
+        }
+
+        .quick-ref .level-box.easy {
+            border-left-color: var(--level-easy);
+            background: var(--level-easy-bg);
+        }
+        .quick-ref .level-box.medium {
+            border-left-color: var(--level-medium);
+            background: var(--level-medium-bg);
+        }
+        .quick-ref .level-box.hard {
+            border-left-color: var(--level-hard);
+            background: var(--level-hard-bg);
+        }
+
+        .quick-ref .level-box .level-label {
+            font-weight: 700;
+            font-size: 17px;
+        }
+        .quick-ref .level-box .level-count {
+            font-size: 15px;
+            color: var(--medium-gray);
+        }
+        .quick-ref .level-box .level-strategy {
+            font-size: 15px;
+            margin-top: 4px;
+        }
+
+        /* –––––––––––––––––– PRO TIPS –––––––––––––––––– */
+        .pro-tips {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 10px 0 4px;
+        }
+
+        @media (max-width: 600px) {
+            .pro-tips {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pro-tip {
+            background: var(--ice-blue);
+            border-radius: 6px;
+            padding: 14px 18px;
+            border-left: 3px solid var(--pearson-blue);
+        }
+
+        .pro-tip strong {
+            color: var(--ink-blue);
+        }
+
+        .pro-tip .tip-label {
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: var(--pearson-blue);
+        }
+
+        /* –––––––––––––––––– FOOTER –––––––––––––––––– */
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: var(--medium-gray);
+            padding: 18px 10px 6px;
+            border-top: 1px solid var(--moonlight);
+            margin-top: 18px;
+        }
+
+        /* –––––––––––––––––– UTILS –––––––––––––––––– */
+        .text-sm {
+            font-size: 15px;
+            color: var(--medium-gray);
+        }
+        .mt-8 {
+            margin-top: 8px;
+        }
+        .mt-12 {
+            margin-top: 12px;
+        }
+        .mb-6 {
+            margin-bottom: 6px;
+        }
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+        .gap-4 {
+            gap: 4px;
+        }
+        .inline-code {
+            background: var(--moonlight);
+            padding: 1px 8px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-family: monospace;
+        }
+        .pill {
+            display: inline-block;
+            background: var(--moonlight);
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--graphite);
+        }
+        .pill-easy {
+            background: var(--level-easy-bg);
+            color: var(--level-easy);
+        }
+        .pill-medium {
+            background: var(--level-medium-bg);
+            color: var(--level-medium);
+        }
+        .pill-hard {
+            background: var(--level-hard-bg);
+            color: var(--level-hard);
+        }
+        .pill-red {
+            background: var(--danger-bg);
+            color: var(--danger);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <header class="topbar">
+        <div class="logo">
+            <span class="logo-mark">P</span>
+            PTE Academic 2026
+        </div>
+        <div class="topbar-right">
+            <span>Vocabulary &amp; Collocations</span>
+            <a href="#">Coach Guide</a>
+        </div>
+    </header>
+
+    <!-- ===== PAGE ===== -->
+    <div class="page">
+
+        <!-- HERO -->
+        <div class="hero">
+            <h1>Vocabulary &amp; Collocations Master List</h1>
+            <div class="sub">235+ essential words + 200+ collocations for PTE Academic success</div>
+            <div class="meta">
+                <span>📚 3 difficulty levels</span>
+                <span>🎯 Grouped by task type</span>
+                <span>📝 With example sentences</span>
+            </div>
+        </div>
+
+        <!-- ===== PRO TIPS ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2 style="font-size:23px; font-weight:700;">Pro Tips for PTE</h2>
+                <span style="font-size:12.5px; font-weight:700; padding:3px 10px; border-radius:12px; background:#fff2d9; color:#8a5a00;">Quick start</span>
+            </div>
+            <div class="pro-tips">
+                <div class="pro-tip">
+                    <div class="tip-label">✏️ Spelling</div>
+                    <p style="margin:2px 0 0;font-size:15px;"><strong>Spelling matters</strong> – practice writing each word 3 times. Common traps: <em>accommodation</em>, <em>environment</em>, <em>committee</em>.</p>
+                </div>
+                <div class="pro-tip">
+                    <div class="tip-label">🔗 Collocations</div>
+                    <p style="margin:2px 0 0;font-size:15px;"><strong>Collocation matters more</strong> than individual words – always learn the word <em>with</em> its common partner (e.g. <em>reach a conclusion</em>, not <em>make a conclusion</em>).</p>
+                </div>
+                <div class="pro-tip">
+                    <div class="tip-label">📊 Describe Image</div>
+                    <p style="margin:2px 0 0;font-size:15px;">For <strong>Describe Image</strong>, the words from Group 2 are your "cheat sheet" – use them in every response (<em>fluctuate</em>, <em>peak</em>, <em>soar</em>, <em>plummet</em>).</p>
+                </div>
+                <div class="pro-tip">
+                    <div class="tip-label">✍️ Essay &amp; Fill in the Blanks</div>
+                    <p style="margin:2px 0 0;font-size:15px;">For <strong>Essay</strong>, use 2–3 Group 1 words and 2–3 connectors from Group 3 per paragraph. For <strong>Fill in the Blanks</strong>, Group 3 collocations (especially prepositions) are tested most.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== LEVEL QUICK REFERENCE ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2 style="font-size:23px; font-weight:700;">Quick Reference – Difficulty Levels</h2>
+                <span style="font-size:12.5px; font-weight:700; padding:3px 10px; border-radius:12px; background:#daf0ed; color:#005a70;">Target your study</span>
+            </div>
+            <div class="quick-ref">
+                <div class="level-box easy">
+                    <div class="level-label">⭐ Easy <span class="pill pill-easy" style="margin-left:6px;">~70 words</span></div>
+                    <div class="level-strategy">Master these for a solid 50+ score. Use confidently in every essay.</div>
+                </div>
+                <div class="level-box medium">
+                    <div class="level-label">⭐⭐ Medium <span class="pill pill-medium" style="margin-left:6px;">~90 words</span></div>
+                    <div class="level-strategy">Essential for 65+ (score target for most universities). Learn collocations too.</div>
+                </div>
+                <div class="level-box hard">
+                    <div class="level-label">⭐⭐⭐ Hard <span class="pill pill-hard" style="margin-left:6px;">~75 words</span></div>
+                    <div class="level-strategy">For 79+ and 85+ targets. Use 2–3 per essay maximum; accuracy is vital.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             COLLAPSIBLE SECTIONS
+             ============================================================ -->
+
+        <!-- ===== GROUP 1 ===== -->
+        <div class="section-card">
+            <div class="section-toggle" onclick="toggleSection('group1-collapsible')">
+                <span class="arrow" id="arrow-group1-collapsible">▶</span>
+                <h2 style="margin:0; font-size:20.5px;">Group 1: Essential Essay Vocabulary</h2>
+                <span class="badge badge-gold">Spelling &amp; High‑Impact Nouns/Adjectives</span>
+            </div>
+            <div class="collapsible" id="group1-collapsible">
+                <p class="text-sm">High‑frequency words for writing tasks. Learn the spelling, meaning, and common collocations.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:50px;">#</th>
+                                <th style="width:100px;">Word</th>
+                                <th style="width:55px;">POS</th>
+                                <th style="width:140px;">Definition</th>
+                                <th style="width:120px;">Synonyms</th>
+                                <th style="min-width:160px;">Example</th>
+                                <th style="width:60px;">Level</th>
+                            </tr>
+                        </thead>
+                        <tbody id="group1-body"></tbody>
+                    </table>
+                    <div class="note">⭐ Easy &nbsp;·&nbsp; ⭐⭐ Medium &nbsp;·&nbsp; ⭐⭐⭐ Hard</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== GROUP 2 ===== -->
+        <div class="section-card">
+            <div class="section-toggle" onclick="toggleSection('group2-collapsible')">
+                <span class="arrow" id="arrow-group2-collapsible">▶</span>
+                <h2 style="margin:0; font-size:20.5px;">Group 2: Visual Analysis &amp; Speaking</h2>
+                <span class="badge badge-turq">Describe Image &amp; Retell Lecture</span>
+            </div>
+            <div class="collapsible" id="group2-collapsible">
+                <p class="text-sm">Essential words for describing charts, graphs, and trends. Use these in every Describe Image response.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:50px;">#</th>
+                                <th style="width:100px;">Word</th>
+                                <th style="width:55px;">POS</th>
+                                <th style="width:140px;">Definition</th>
+                                <th style="width:120px;">Synonyms</th>
+                                <th style="min-width:160px;">Example</th>
+                                <th style="width:60px;">Level</th>
+                            </tr>
+                        </thead>
+                        <tbody id="group2-body"></tbody>
+                    </table>
+                    <div class="note">⭐ Easy &nbsp;·&nbsp; ⭐⭐ Medium &nbsp;·&nbsp; ⭐⭐⭐ Hard</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== GROUP 3 ===== -->
+        <div class="section-card">
+            <div class="section-toggle" onclick="toggleSection('group3-collapsible')">
+                <span class="arrow" id="arrow-group3-collapsible">▶</span>
+                <h2 style="margin:0; font-size:20.5px;">Group 3: Connectors &amp; Collocations</h2>
+                <span class="badge badge-blue">Blanks, Summaries &amp; Writing</span>
+            </div>
+            <div class="collapsible" id="group3-collapsible">
+                <p class="text-sm">Connectors, transition words, and high‑frequency collocations. Essential for Fill in the Blanks and essay coherence.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:50px;">#</th>
+                                <th style="width:110px;">Word / Phrase</th>
+                                <th style="width:55px;">POS</th>
+                                <th style="width:130px;">Definition</th>
+                                <th style="width:120px;">Synonyms</th>
+                                <th style="min-width:160px;">Example</th>
+                                <th style="width:60px;">Level</th>
+                            </tr>
+                        </thead>
+                        <tbody id="group3-body"></tbody>
+                    </table>
+                    <div class="note">⭐ Easy &nbsp;·&nbsp; ⭐⭐ Medium &nbsp;·&nbsp; ⭐⭐⭐ Hard</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== BONUS: TOP 50 COLLOCATIONS ===== -->
+        <div class="section-card">
+            <div class="section-toggle" onclick="toggleSection('bonus-collapsible')">
+                <span class="arrow" id="arrow-bonus-collapsible">▶</span>
+                <h2 style="margin:0; font-size:20.5px;">Bonus: Top 50 Collocation Pairs</h2>
+                <span class="badge badge-gold">Most tested in PTE Fill in the Blanks</span>
+            </div>
+            <div class="collapsible" id="bonus-collapsible">
+                <p class="text-sm">These collocations appear frequently in the exam. Learn the correct preposition and verb‑noun pair.</p>
+                <div class="colloc-grid" id="colloc-grid"></div>
+            </div>
+        </div>
+
+        <!-- ===== FULL COLLOCATION LIST ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2 style="font-size:23px; font-weight:700;">Full Collocation List – By Section</h2>
+                <span style="font-size:12.5px; font-weight:700; padding:3px 10px; border-radius:12px; background:#e6f3f2; color:#19a5a3;">200+ collocations</span>
+            </div>
+            <p class="text-sm">Click to expand each section. All collocations with example sentences.</p>
+
+            <!-- Section 1 -->
+            <div class="section-toggle" onclick="toggleSection('colloc-s1')" style="margin-top:12px;">
+                <span class="arrow" id="arrow-colloc-s1">▶</span>
+                <strong>Section 1:</strong> Adjective + Noun <span class="pill" style="margin-left:6px;">50 collocations</span>
+            </div>
+            <div class="collapsible" id="colloc-s1">
+                <div class="colloc-grid" id="colloc-s1-grid" style="margin-top:8px;"></div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section-toggle" onclick="toggleSection('colloc-s2')" style="margin-top:12px;">
+                <span class="arrow" id="arrow-colloc-s2">▶</span>
+                <strong>Section 2:</strong> Verb + Noun <span class="pill" style="margin-left:6px;">50 collocations</span>
+            </div>
+            <div class="collapsible" id="colloc-s2">
+                <div class="colloc-grid" id="colloc-s2-grid" style="margin-top:8px;"></div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section-toggle" onclick="toggleSection('colloc-s3')" style="margin-top:12px;">
+                <span class="arrow" id="arrow-colloc-s3">▶</span>
+                <strong>Section 3:</strong> Noun + Noun <span class="pill" style="margin-left:6px;">25 collocations</span>
+            </div>
+            <div class="collapsible" id="colloc-s3">
+                <div class="colloc-grid" id="colloc-s3-grid" style="margin-top:8px;"></div>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section-toggle" onclick="toggleSection('colloc-s4')" style="margin-top:12px;">
+                <span class="arrow" id="arrow-colloc-s4">▶</span>
+                <strong>Section 4:</strong> Adverb + Adjective <span class="pill" style="margin-left:6px;">25 collocations</span>
+            </div>
+            <div class="collapsible" id="colloc-s4">
+                <div class="colloc-grid" id="colloc-s4-grid" style="margin-top:8px;"></div>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="section-toggle" onclick="toggleSection('colloc-s5')" style="margin-top:12px;">
+                <span class="arrow" id="arrow-colloc-s5">▶</span>
+                <strong>Section 5:</strong> Adjective + Preposition <span class="pill" style="margin-left:6px;">20 collocations</span>
+            </div>
+            <div class="collapsible" id="colloc-s5">
+                <div class="colloc-grid" id="colloc-s5-grid" style="margin-top:8px;"></div>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="section-toggle" onclick="toggleSection('colloc-s6')" style="margin-top:12px;">
+                <span class="arrow" id="arrow-colloc-s6">▶</span>
+                <strong>Section 6:</strong> Verb + Preposition <span class="pill" style="margin-left:6px;">20 collocations</span>
+            </div>
+            <div class="collapsible" id="colloc-s6">
+                <div class="colloc-grid" id="colloc-s6-grid" style="margin-top:8px;"></div>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="section-toggle" onclick="toggleSection('colloc-s7')" style="margin-top:12px;">
+                <span class="arrow" id="arrow-colloc-s7">▶</span>
+                <strong>Section 7:</strong> Noun + Preposition <span class="pill" style="margin-left:6px;">10 collocations</span>
+            </div>
+            <div class="collapsible" id="colloc-s7">
+                <div class="colloc-grid" id="colloc-s7-grid" style="margin-top:8px;"></div>
+            </div>
+
+            <!-- Additional -->
+            <div class="section-toggle" onclick="toggleSection('colloc-s8')" style="margin-top:12px;">
+                <span class="arrow" id="arrow-colloc-s8">▶</span>
+                <strong>Additional:</strong> From Video Sources <span class="pill" style="margin-left:6px;">31 collocations</span>
+            </div>
+            <div class="collapsible" id="colloc-s8">
+                <div class="colloc-grid" id="colloc-s8-grid" style="margin-top:8px;"></div>
+            </div>
+
+            <!-- Trap Collocations -->
+            <div class="section-toggle" onclick="toggleSection('colloc-trap')" style="margin-top:12px;">
+                <span class="arrow" id="arrow-colloc-trap">▶</span>
+                <strong>⚠️ High‑Frequency Trap Collocations</strong>
+                <span class="pill pill-red" style="margin-left:6px;background:var(--danger-bg);color:var(--danger);">Common errors</span>
+            </div>
+            <div class="collapsible" id="colloc-trap">
+                <div class="colloc-grid" id="colloc-trap-grid" style="margin-top:8px;"></div>
+            </div>
+        </div>
+
+        <footer>Demo page · not affiliated with or endorsed by Pearson · PTE Academic 2026 — Vocabulary &amp; Collocations</footer>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- JAVASCRIPT – VANILLA JS                                        -->
+    <!-- ============================================================ -->
+    <script>
+        // ============================================================
+        // TOGGLE FUNCTION
+        // ============================================================
+        function toggleSection(sectionId) {
+            const el = document.getElementById(sectionId);
+            const arrow = document.getElementById('arrow-' + sectionId);
+            if (!el) return;
+            el.classList.toggle('open');
+            if (arrow) {
+                arrow.classList.toggle('open');
+            }
+        }
+
+        // ============================================================
+        // DATA – Group 1: Essential Essay Vocabulary
+        // ============================================================
+        const group1Data = [
+            { id: 1, word: "Accommodation", pos: "N", def: "Place to live/stay", syn: "Housing, lodging, premises",
+                ex: "The university upgraded its student accommodation.", level: "⭐" },
+            { id: 2, word: "Indispensable", pos: "Adj", def: "Absolutely necessary", syn: "Crucial, vital, mandatory",
+                ex: "Cybersecurity has become indispensable.", level: "⭐⭐" },
+            { id: 3, word: "Adverse", pos: "Adj", def: "Harmful, preventing success",
+                syn: "Detrimental, negative, unfavourable", ex: "Pollution has adverse effects on health.", level: "⭐⭐" },
+            { id: 4, word: "Aspect", pos: "N", def: "A specific feature/part", syn: "Feature, dimension, element",
+                ex: "Cost is one aspect of the problem.", level: "⭐" },
+            { id: 5, word: "Clarify", pos: "V", def: "Make less confused", syn: "Explain, simplify, clear up",
+                ex: "The report aims to clarify the policy.", level: "⭐" },
+            { id: 6, word: "Fundamental", pos: "Adj", def: "Central, primary", syn: "Core, basic, elemental",
+                ex: "Clean water is a fundamental right.", level: "⭐⭐" },
+            { id: 7, word: "Profound", pos: "Adj", def: "Very great, deep", syn: "Significant, deep, transformative",
+                ex: "AI will have a profound impact.", level: "⭐⭐" },
+            { id: 8, word: "Empirical", pos: "Adj", def: "Based on observation/experience",
+                syn: "Observational, factual, experimental", ex: "We need empirical evidence.", level: "⭐⭐" },
+            { id: 9, word: "Objective", pos: "N", def: "A goal/target", syn: "Aim, purpose, goal",
+                ex: "The main objective is to reduce waste.", level: "⭐" },
+            { id: 10, word: "Environment", pos: "N", def: "Surroundings/conditions", syn: "Habitat, surroundings, setting",
+                ex: "The marine environment is threatened.", level: "⭐" },
+            { id: 11, word: "Crucial", pos: "Adj", def: "Extremely important", syn: "Critical, vital, essential",
+                ex: "Time management is crucial for success.", level: "⭐" },
+            { id: 12, word: "Significant", pos: "Adj", def: "Important/meaningful", syn: "Notable, substantial, considerable",
+                ex: "There was a significant improvement.", level: "⭐" },
+            { id: 13, word: "Substantial", pos: "Adj", def: "Large in amount/degree",
+                syn: "Considerable, significant, ample", ex: "The project received substantial funding.", level: "⭐⭐" },
+            { id: 14, word: "Vital", pos: "Adj", def: "Absolutely necessary", syn: "Essential, indispensable, critical",
+                ex: "Sleep is vital for health.", level: "⭐" },
+            { id: 15, word: "Contemporary", pos: "Adj", def: "Modern, current", syn: "Present-day, current, modern",
+                ex: "Contemporary art often challenges norms.", level: "⭐⭐" },
+            { id: 16, word: "Diverse", pos: "Adj", def: "Showing variety", syn: "Varied, mixed, assorted",
+                ex: "The city has a diverse population.", level: "⭐" },
+            { id: 17, word: "Inevitable", pos: "Adj", def: "Certain to happen", syn: "Unavoidable, inescapable, certain",
+                ex: "Change is inevitable in any industry.", level: "⭐⭐" },
+            { id: 18, word: "Inherent", pos: "Adj", def: "Existing as a permanent quality",
+                syn: "Intrinsic, innate, natural", ex: "There is an inherent risk in investing.", level: "⭐⭐" },
+            { id: 19, word: "Prevalent", pos: "Adj", def: "Widespread, common", syn: "Common, widespread, predominant",
+                ex: "Obesity is prevalent in developed nations.", level: "⭐⭐" },
+            { id: 20, word: "Tremendous", pos: "Adj", def: "Extremely large/great", syn: "Huge, enormous, massive",
+                ex: "The project required tremendous effort.", level: "⭐" },
+            { id: 21, word: "Alleviate", pos: "V", def: "Make less severe", syn: "Reduce, ease, relieve",
+                ex: "Exercise can alleviate stress.", level: "⭐⭐" },
+            { id: 22, word: "Exacerbate", pos: "V", def: "Make worse", syn: "Worsen, aggravate, intensify",
+                ex: "Pollution exacerbates respiratory illness.", level: "⭐⭐⭐" },
+            { id: 23, word: "Facilitate", pos: "V", def: "Make easier", syn: "Enable, assist, simplify",
+                ex: "Technology facilitates communication.", level: "⭐⭐" },
+            { id: 24, word: "Mitigate", pos: "V", def: "Reduce severity", syn: "Lessen, reduce, diminish",
+                ex: "Planting trees can mitigate climate effects.", level: "⭐⭐⭐" },
+            { id: 25, word: "Advocate", pos: "V", def: "Publicly support", syn: "Promote, endorse, champion",
+                ex: "Many advocate for renewable energy.", level: "⭐⭐" },
+            { id: 26, word: "Negate", pos: "V", def: "Nullify, make ineffective", syn: "Cancel, counteract, invalidate",
+                ex: "Poor planning can negate any advantage.", level: "⭐⭐⭐" },
+            { id: 27, word: "Enhance", pos: "V", def: "Improve quality/value", syn: "Improve, boost, strengthen",
+                ex: "Exercise enhances cognitive performance.", level: "⭐⭐" },
+            { id: 28, word: "Undermine", pos: "V", def: "Weaken gradually", syn: "Erode, weaken, damage",
+                ex: "Corruption can undermine public trust.", level: "⭐⭐" },
+            { id: 29, word: "Articulate", pos: "V", def: "Express clearly", syn: "Express, convey, communicate",
+                ex: "She articulated her arguments effectively.", level: "⭐⭐" },
+            { id: 30, word: "Acknowledge", pos: "V", def: "Accept/recognise", syn: "Recognise, accept, admit",
+                ex: "We must acknowledge the limitations.", level: "⭐" },
+            { id: 31, word: "Implementation", pos: "N", def: "Putting into action", syn: "Execution, application, enforcement",
+                ex: "The implementation of new rules took time.", level: "⭐⭐" },
+            { id: 32, word: "Phenomenon", pos: "N", def: "Observable fact/event", syn: "Occurrence, event, happening",
+                ex: "Global warming is a well-known phenomenon.", level: "⭐⭐" },
+            { id: 33, word: "Hypothesis", pos: "N", def: "Proposed explanation", syn: "Theory, assumption, proposition",
+                ex: "The hypothesis was proven correct.", level: "⭐⭐" },
+            { id: 34, word: "Consequence", pos: "N", def: "Result/outcome", syn: "Outcome, result, effect",
+                ex: "The consequences of pollution are severe.", level: "⭐" },
+            { id: 35, word: "Discrepancy", pos: "N", def: "Difference/inconsistency", syn: "Gap, inconsistency, variation",
+                ex: "A discrepancy appeared in the data.", level: "⭐⭐⭐" },
+            { id: 36, word: "Implication", pos: "N", def: "Possible effect", syn: "Ramification, inference, consequence",
+                ex: "The policy has far-reaching implications.", level: "⭐⭐" },
+            { id: 37, word: "Paradigm", pos: "N", def: "Typical example/model", syn: "Model, pattern, standard",
+                ex: "This is a new paradigm in education.", level: "⭐⭐⭐" },
+            { id: 38, word: "Assumption", pos: "N", def: "Something taken as true", syn: "Presumption, belief, hypothesis",
+                ex: "We need to question our assumptions.", level: "⭐⭐" },
+            { id: 39, word: "Dichotomy", pos: "N", def: "Division into two contrasting groups", syn: "Division, contrast, split",
+                ex: "There is a false dichotomy between economy and environment.", level: "⭐⭐⭐" },
+            { id: 40, word: "Predominantly", pos: "Adv", def: "Mainly, mostly", syn: "Primarily, chiefly, largely",
+                ex: "The population is predominantly urban.", level: "⭐⭐" },
+            { id: 41, word: "Exceptionally", pos: "Adv", def: "Unusually, remarkably", syn: "Remarkably, unusually, extraordinarily",
+                ex: "She is exceptionally talented.", level: "⭐⭐" },
+            { id: 42, word: "Inevitably", pos: "Adv", def: "Unavoidably", syn: "Unavoidably, certainly, necessarily",
+                ex: "This approach will inevitably face challenges.", level: "⭐⭐" },
+            { id: 43, word: "Collectively", pos: "Adv", def: "As a group", syn: "Together, jointly, communally",
+                ex: "Collectively, we can solve this.", level: "⭐⭐" },
+            { id: 44, word: "Notably", pos: "Adv", def: "Especially, particularly", syn: "Particularly, especially, remarkably",
+                ex: "Notably, the data supports this view.", level: "⭐⭐" },
+            { id: 45, word: "Undeniably", pos: "Adv", def: "Cannot be denied", syn: "Indisputably, unquestionably",
+                ex: "The evidence is undeniably strong.", level: "⭐⭐" },
+            { id: 46, word: "Innovative", pos: "Adj", def: "Introducing new ideas", syn: "Original, pioneering, novel",
+                ex: "The company uses innovative technology.", level: "⭐⭐" },
+            { id: 47, word: "Sustainable", pos: "Adj", def: "Maintainable long-term", syn: "Viable, renewable, long-lasting",
+                ex: "We need sustainable development.", level: "⭐" },
+            { id: 48, word: "Integrated", pos: "Adj", def: "Combined into a whole", syn: "Unified, combined, cohesive",
+                ex: "An integrated approach is needed.", level: "⭐⭐" },
+            { id: 49, word: "Marginal", pos: "Adj", def: "Minor, small", syn: "Slight, small, negligible",
+                ex: "The impact was only marginal.", level: "⭐⭐" },
+            { id: 50, word: "Scarce", pos: "Adj", def: "Insufficient, limited", syn: "Limited, rare, insufficient",
+                ex: "Water is scarce in desert regions.", level: "⭐" },
+            { id: 51, word: "Stringent", pos: "Adj", def: "Strict, severe", syn: "Strict, rigorous, tight",
+                ex: "Stringent regulations are in place.", level: "⭐⭐⭐" },
+            { id: 52, word: "Transparent", pos: "Adj", def: "Clear, open", syn: "Clear, obvious, unambiguous",
+                ex: "Government processes should be transparent.", level: "⭐⭐" },
+            { id: 53, word: "Ubiquitous", pos: "Adj", def: "Present everywhere", syn: "Omnipresent, widespread, pervasive",
+                ex: "Smartphones are ubiquitous today.", level: "⭐⭐⭐" },
+            { id: 54, word: "Versatile", pos: "Adj", def: "Adaptable, flexible", syn: "Adaptable, flexible, multipurpose",
+                ex: "This is a versatile material.", level: "⭐⭐" },
+            { id: 55, word: "Widespread", pos: "Adj", def: "Found over a large area", syn: "Prevalent, extensive, universal",
+                ex: "Plastic use is widespread.", level: "⭐" }
+        ];
+
+        // ============================================================
+        // DATA – Group 2: Visual Analysis & Speaking
+        // ============================================================
+        const group2Data = [
+            { id: 56, word: "Initially", pos: "Adv", def: "At the beginning", syn: "At first, originally, to begin with",
+                ex: "Initially, the graph shows a steady rise.", level: "⭐" },
+            { id: 57, word: "Prominent", pos: "Adj", def: "Noticeable, standing out", syn: "Main, outstanding, obvious",
+                ex: "The most prominent feature is the peak in 2020.", level: "⭐" },
+            { id: 58, word: "Notable", pos: "Adj", def: "Deserving attention", syn: "Remarkable, significant, visible",
+                ex: "There is a notable increase.", level: "⭐" },
+            { id: 59, word: "Contrast", pos: "N", def: "Striking difference", syn: "Difference, comparison, opposition",
+                ex: "In contrast, rural areas show decline.", level: "⭐" },
+            { id: 60, word: "Trend", pos: "N", def: "General direction", syn: "Pattern, movement, drift",
+                ex: "An upward trend is evident.", level: "⭐" },
+            { id: 61, word: "Distinction", pos: "N", def: "Clear difference", syn: "Difference, division, separation",
+                ex: "The chart highlights a clear distinction.", level: "⭐⭐" },
+            { id: 62, word: "Varied", pos: "Adj", def: "Diverse, mixed", syn: "Diverse, different, mixed",
+                ex: "The results are highly varied.", level: "⭐" },
+            { id: 63, word: "Insight", pos: "N", def: "Deep understanding", syn: "Understanding, perception, view",
+                ex: "This gives insight into consumer habits.", level: "⭐⭐" },
+            { id: 64, word: "Beneficial", pos: "Adj", def: "Helpful, positive", syn: "Advantageous, positive, helpful",
+                ex: "Green spaces are beneficial.", level: "⭐" },
+            { id: 65, word: "Illustration", pos: "N", def: "Example/diagram", syn: "Example, demonstration, diagram",
+                ex: "The chart is a clear illustration.", level: "⭐⭐" },
+            { id: 66, word: "Depict", pos: "V", def: "Show/represent", syn: "Show, portray, illustrate",
+                ex: "The graph depicts population growth.", level: "⭐⭐" },
+            { id: 67, word: "Fluctuate", pos: "V", def: "Rise and fall irregularly", syn: "Vary, oscillate, change",
+                ex: "The numbers fluctuate over time.", level: "⭐⭐" },
+            { id: 68, word: "Peak", pos: "V/N", def: "Reach highest point", syn: "Summit, maximum, zenith",
+                ex: "The graph peaks in July.", level: "⭐" },
+            { id: 69, word: "Plateau", pos: "V/N", def: "Level off, stabilise", syn: "Stabilise, level out, flatline",
+                ex: "Sales plateaued after the launch.", level: "⭐⭐" },
+            { id: 70, word: "Plummet", pos: "V", def: "Drop sharply", syn: "Fall, plunge, collapse",
+                ex: "Prices plummeted during the crisis.", level: "⭐⭐" },
+            { id: 71, word: "Soar", pos: "V", def: "Rise sharply", syn: "Surge, skyrocket, climb",
+                ex: "Profits soared after the merger.", level: "⭐⭐" },
+            { id: 72, word: "Gradual", pos: "Adj", def: "Slow, step-by-step", syn: "Slow, steady, incremental",
+                ex: "A gradual improvement is seen.", level: "⭐" },
+            { id: 73, word: "Dramatic", pos: "Adj", def: "Sudden and noticeable", syn: "Sharp, striking, abrupt",
+                ex: "A dramatic change occurred.", level: "⭐⭐" },
+            { id: 74, word: "Steady", pos: "Adj", def: "Constant, regular", syn: "Stable, consistent, uniform",
+                ex: "The line shows a steady increase.", level: "⭐" },
+            { id: 75, word: "Sharp", pos: "Adj", def: "Sudden and steep", syn: "Sudden, abrupt, steep",
+                ex: "A sharp decline followed.", level: "⭐" },
+            { id: 76, word: "Slump", pos: "V/N", def: "Fall suddenly", syn: "Drop, decline, sink",
+                ex: "The market slumped last year.", level: "⭐⭐" },
+            { id: 77, word: "Surge", pos: "V/N", def: "Sudden increase", syn: "Jump, spike, rise",
+                ex: "There was a surge in demand.", level: "⭐⭐" },
+            { id: 78, word: "Level off", pos: "V", def: "Stop rising/falling", syn: "Stabilise, flatten, plateau",
+                ex: "The numbers level off after 2025.", level: "⭐" },
+            { id: 79, word: "Corresponding", pos: "Adj", def: "Matching", syn: "Matching, parallel, equivalent",
+                ex: "A corresponding rise was observed.", level: "⭐⭐" },
+            { id: 80, word: "Overall", pos: "Adv/Adj", def: "In general", syn: "Generally, on the whole",
+                ex: "Overall, the trend is positive.", level: "⭐" },
+            { id: 81, word: "Outweigh", pos: "V", def: "Be greater than", syn: "Exceed, surpass, override",
+                ex: "The benefits outweigh the costs.", level: "⭐⭐" },
+            { id: 82, word: "Constitute", pos: "V", def: "Make up, form", syn: "Compose, form, represent",
+                ex: "Women constitute 60% of the workforce.", level: "⭐⭐" },
+            { id: 83, word: "Account for", pos: "V", def: "Represent, explain", syn: "Represent, explain, justify",
+                ex: "Services account for 70% of GDP.", level: "⭐" },
+            { id: 84, word: "Reveal", pos: "V", def: "Make known", syn: "Show, disclose, unveil",
+                ex: "The data reveals a hidden pattern.", level: "⭐" },
+            { id: 85, word: "Illustrate", pos: "V", def: "Show with examples", syn: "Demonstrate, show, depict",
+                ex: "This graph illustrates the change.", level: "⭐⭐" },
+            { id: 86, word: "Highlight", pos: "V", def: "Emphasise, make prominent", syn: "Emphasise, underline, stress",
+                ex: "The report highlights key issues.", level: "⭐" },
+            { id: 87, word: "Outline", pos: "V", def: "Give a brief summary", syn: "Summarise, sketch, describe",
+                ex: "The lecture outlines the main points.", level: "⭐⭐" },
+            { id: 88, word: "Pertaining to", pos: "Prep", def: "Relating to", syn: "Concerning, relating to, regarding",
+                ex: "Data pertaining to urban areas.", level: "⭐⭐" },
+            { id: 89, word: "Distinguish", pos: "V", def: "Recognise differences", syn: "Differentiate, tell apart, discern",
+                ex: "It's important to distinguish between types.", level: "⭐⭐" },
+            { id: 90, word: "Comparative", pos: "Adj", def: "Involving comparison", syn: "Relative, proportional, analogous",
+                ex: "A comparative analysis is useful.", level: "⭐⭐" },
+            { id: 91, word: "Disparate", pos: "Adj", def: "Very different", syn: "Diverse, contrasting, dissimilar",
+                ex: "The groups are disparate.", level: "⭐⭐⭐" },
+            { id: 92, word: "Uniform", pos: "Adj", def: "Consistent, regular", syn: "Consistent, regular, similar",
+                ex: "The distribution is fairly uniform.", level: "⭐⭐" },
+            { id: 93, word: "Aggregate", pos: "Adj/N", def: "Total combined", syn: "Total, combined, cumulative",
+                ex: "The aggregate figure is important.", level: "⭐⭐" },
+            { id: 94, word: "Cumulative", pos: "Adj", def: "Increasing by addition", syn: "Accumulated, total, combined",
+                ex: "The cumulative effect is significant.", level: "⭐⭐" },
+            { id: 95, word: "Ephemeral", pos: "Adj", def: "Short-lived, temporary", syn: "Short-lived, momentary, brief",
+                ex: "Some trends are ephemeral.", level: "⭐⭐⭐" },
+            { id: 96, word: "Pervasive", pos: "Adj", def: "Spreading widely", syn: "Widespread, prevalent, omnipresent",
+                ex: "Technology is pervasive in society.", level: "⭐⭐⭐" },
+            { id: 97, word: "Oscillate", pos: "V", def: "Swing back and forth", syn: "Fluctuate, swing, alternate",
+                ex: "The graph oscillates between highs and lows.", level: "⭐⭐⭐" },
+            { id: 98, word: "Interdependent", pos: "Adj", def: "Dependent on each other", syn: "Interconnected, mutual, linked",
+                ex: "Economy and environment are interdependent.", level: "⭐⭐" },
+            { id: 99, word: "Tangible", pos: "Adj", def: "Clearly seen/touched", syn: "Concrete, real, touchable",
+                ex: "There is no tangible evidence.", level: "⭐⭐" },
+            { id: 100, word: "Intangible", pos: "Adj", def: "Cannot be touched", syn: "Abstract, immaterial, conceptual",
+                ex: "Brand value is intangible.", level: "⭐⭐" },
+            { id: 101, word: "Forecast", pos: "V/N", def: "Predict future trends", syn: "Predict, project, estimate",
+                ex: "The forecast predicts growth.", level: "⭐" },
+            { id: 102, word: "Projection", pos: "N", def: "Estimate of future", syn: "Prediction, estimate, forecast",
+                ex: "The projection is optimistic.", level: "⭐⭐" },
+            { id: 103, word: "Extrapolate", pos: "V", def: "Estimate from known data", syn: "Infer, project, deduce",
+                ex: "We can extrapolate future trends.", level: "⭐⭐⭐" },
+            { id: 104, word: "Downward/Upward", pos: "Adj", def: "Direction", syn: "Falling, decreasing / rising, increasing",
+                ex: "A downward trend is concerning.", level: "⭐" },
+            { id: 105, word: "Monotonous", pos: "Adj", def: "Unchanging, flat", syn: "Dull, repetitive, flat",
+                ex: "The line is somewhat monotonous.", level: "⭐⭐" },
+            { id: 106, word: "Volatile", pos: "Adj", def: "Prone to change", syn: "Unstable, erratic, fluctuating",
+                ex: "The market is volatile.", level: "⭐⭐⭐" },
+            { id: 107, word: "Static", pos: "Adj", def: "Unchanging, stable", syn: "Fixed, unchanged, steady",
+                ex: "The numbers remained static.", level: "⭐⭐" },
+            { id: 108, word: "Sporadic", pos: "Adj", def: "Irregular, occasional", syn: "Occasional, irregular, intermittent",
+                ex: "There were sporadic increases.", level: "⭐⭐⭐" },
+            { id: 109, word: "Progressive", pos: "Adj", def: "Continuing, advancing", syn: "Gradual, ongoing, cumulative",
+                ex: "A progressive improvement is seen.", level: "⭐⭐" },
+            { id: 110, word: "Regressive", pos: "Adj", def: "Declining, going backwards", syn: "Declining, retrograde, backward",
+                ex: "The data shows a regressive pattern.", level: "⭐⭐⭐" }
+        ];
+
+        // ============================================================
+        // DATA – Group 3: Connectors & Collocations
+        // ============================================================
+        const group3Data = [
+            { id: 116, word: "Subsequently", pos: "Adv", def: "Later, after", syn: "Later, afterward, next",
+                ex: "The policy failed and subsequently was revised.", level: "⭐⭐" },
+            { id: 117, word: "Conduct", pos: "V", def: "Organise/carry out", syn: "Perform, run, carry out",
+                ex: "They will conduct a survey.", level: "⭐" },
+            { id: 118, word: "Emphasis", pos: "N", def: "Special importance", syn: "Focus, stress, priority",
+                ex: "Place greater emphasis on health.", level: "⭐⭐" },
+            { id: 119, word: "Regulation", pos: "N", def: "Rule/law", syn: "Law, rule, guideline",
+                ex: "Strict regulations were imposed.", level: "⭐" },
+            { id: 120, word: "Correlation", pos: "N", def: "Mutual relationship", syn: "Link, association, connection",
+                ex: "A strong correlation exists.", level: "⭐⭐" },
+            { id: 121, word: "Whereas", pos: "Conj", def: "In contrast", syn: "While, although, on the other hand",
+                ex: "Urban areas grow, whereas rural ones shrink.", level: "⭐⭐" },
+            { id: 122, word: "Thereby", pos: "Adv", def: "By that means", syn: "Thus, as a result, in this way",
+                ex: "New bike lanes were built, thereby reducing traffic.", level: "⭐⭐⭐" },
+            { id: 123, word: "Consequently", pos: "Adv", def: "As a result", syn: "Therefore, thus, as a result",
+                ex: "The factory polluted and was consequently fined.", level: "⭐⭐" },
+            { id: 124, word: "Analyze", pos: "V", def: "Examine methodically", syn: "Study, examine, evaluate",
+                ex: "Economists analyze data.", level: "⭐" },
+            { id: 125, word: "Furthermore", pos: "Adv", def: "In addition", syn: "In addition, moreover, also",
+                ex: "The system is fast; furthermore, it is secure.", level: "⭐⭐" },
+            { id: 126, word: "Nevertheless", pos: "Adv", def: "Despite that", syn: "However, nonetheless, still",
+                ex: "The risks are high; nevertheless, we proceed.", level: "⭐⭐" },
+            { id: 127, word: "Nonetheless", pos: "Adv", def: "However", syn: "However, nonetheless, yet",
+                ex: "It was difficult; nonetheless, we succeeded.", level: "⭐⭐" },
+            { id: 128, word: "Accordingly", pos: "Adv", def: "In a suitable way", syn: "Consequently, therefore, thus",
+                ex: "The demand increased and prices rose accordingly.", level: "⭐⭐⭐" },
+            { id: 129, word: "Hence", pos: "Adv", def: "Therefore", syn: "Therefore, thus, consequently",
+                ex: "The data is insufficient; hence, no conclusion.", level: "⭐⭐" },
+            { id: 130, word: "Moreover", pos: "Adv", def: "In addition", syn: "Furthermore, additionally, also",
+                ex: "The project is on budget; moreover, it's ahead of schedule.", level: "⭐⭐" },
+            { id: 131, word: "Notwithstanding", pos: "Prep/Adv", def: "Despite", syn: "Despite, regardless of",
+                ex: "Notwithstanding the challenges, we continued.", level: "⭐⭐⭐" },
+            { id: 132, word: "Likewise", pos: "Adv", def: "Similarly", syn: "Similarly, in the same way",
+                ex: "Urban areas grew; likewise, suburbs expanded.", level: "⭐⭐" },
+            { id: 133, word: "Conversely", pos: "Adv", def: "In contrast", syn: "Conversely, on the other hand",
+                ex: "Rich nations pollute more; conversely, poor nations pollute less.", level: "⭐⭐⭐" },
+            { id: 134, word: "Unlike", pos: "Prep", def: "Different from", syn: "Different from, in contrast to",
+                ex: "Unlike previous years, this year shows growth.", level: "⭐" },
+            { id: 135, word: "Together with", pos: "Prep", def: "In addition to", syn: "Along with, coupled with",
+                ex: "Technology, together with education, improves lives.", level: "⭐⭐" },
+            { id: 136, word: "Coupled with", pos: "Prep", def: "Combined with", syn: "Combined with, along with",
+                ex: "Poor diet, coupled with lack of exercise, causes obesity.", level: "⭐⭐⭐" },
+            { id: 137, word: "In light of", pos: "Prep", def: "Considering", syn: "Considering, given, in view of",
+                ex: "In light of new evidence, we changed course.", level: "⭐⭐⭐" },
+            { id: 138, word: "Take into account", pos: "V", def: "Consider", syn: "Consider, factor in, acknowledge",
+                ex: "We must take into account all variables.", level: "⭐⭐" },
+            { id: 139, word: "Give rise to", pos: "V", def: "Cause", syn: "Cause, generate, produce",
+                ex: "Pollution gives rise to health problems.", level: "⭐⭐⭐" },
+            { id: 140, word: "Lay emphasis on", pos: "V", def: "Stress", syn: "Emphasise, stress, highlight",
+                ex: "We lay emphasis on sustainability.", level: "⭐⭐" },
+            { id: 141, word: "Bring about", pos: "V", def: "Cause", syn: "Cause, generate, induce",
+                ex: "Innovation can bring about change.", level: "⭐⭐" },
+            { id: 142, word: "Lead to", pos: "V", def: "Result in", syn: "Result in, cause, produce",
+                ex: "Poor diet leads to illness.", level: "⭐" },
+            { id: 143, word: "Result from", pos: "V", def: "Be caused by", syn: "Arise from, stem from, be due to",
+                ex: "Illness results from poor diet.", level: "⭐⭐" },
+            { id: 144, word: "Adhere to", pos: "V", def: "Follow closely", syn: "Follow, comply with, observe",
+                ex: "All staff must adhere to safety guidelines.", level: "⭐⭐⭐" },
+            { id: 145, word: "Comply with", pos: "V", def: "Obey rules", syn: "Follow, obey, conform to",
+                ex: "Companies must comply with regulations.", level: "⭐⭐" },
+            { id: 146, word: "Derive from", pos: "V", def: "Come from", syn: "Originate from, stem from, obtain from",
+                ex: "The word derives from Latin.", level: "⭐⭐" },
+            { id: 147, word: "Stem from", pos: "V", def: "Originate from", syn: "Arise from, result from, come from",
+                ex: "Many problems stem from inequality.", level: "⭐⭐" },
+            { id: 148, word: "Allocate", pos: "V", def: "Distribute", syn: "Assign, distribute, designate",
+                ex: "The budget was allocated to education.", level: "⭐⭐" },
+            { id: 149, word: "Designate", pos: "V", def: "Officially assign", syn: "Assign, name, appoint",
+                ex: "A room was designated for meetings.", level: "⭐⭐" },
+            { id: 150, word: "Procure", pos: "V", def: "Obtain, acquire", syn: "Obtain, acquire, secure",
+                ex: "The company procured new equipment.", level: "⭐⭐⭐" },
+            { id: 151, word: "Contemplate", pos: "V", def: "Think deeply", syn: "Consider, ponder, reflect",
+                ex: "We contemplate the implications.", level: "⭐⭐⭐" },
+            { id: 152, word: "Elaborate", pos: "V", def: "Explain in detail", syn: "Expand, develop, detail",
+                ex: "Let me elaborate on this point.", level: "⭐⭐" },
+            { id: 153, word: "Postulate", pos: "V", def: "Suggest as a theory", syn: "Propose, hypothesise, assume",
+                ex: "The scientist postulated a new theory.", level: "⭐⭐⭐" },
+            { id: 154, word: "Quantify", pos: "V", def: "Measure numerically", syn: "Measure, calculate, assess",
+                ex: "It is difficult to quantify happiness.", level: "⭐⭐⭐" },
+            { id: 155, word: "Reinforce", pos: "V", def: "Strengthen", syn: "Strengthen, support, bolster",
+                ex: "The evidence reinforces the argument.", level: "⭐⭐" },
+            { id: 156, word: "Supplement", pos: "V", def: "Add extra", syn: "Augment, add to, enhance",
+                ex: "The diet was supplemented with vitamins.", level: "⭐⭐" },
+            { id: 157, word: "Converge", pos: "V", def: "Meet, come together", syn: "Merge, unite, coincide",
+                ex: "The two lines converge at this point.", level: "⭐⭐⭐" },
+            { id: 158, word: "Diverge", pos: "V", def: "Separate, differ", syn: "Diverge, split, deviate",
+                ex: "The paths diverge significantly.", level: "⭐⭐⭐" },
+            { id: 159, word: "Manifest", pos: "V", def: "Show clearly", syn: "Display, reveal, demonstrate",
+                ex: "The symptoms manifest early.", level: "⭐⭐⭐" },
+            { id: 160, word: "Emerge", pos: "V", def: "Come out, appear", syn: "Appear, come forth, surface",
+                ex: "A new pattern emerges from the data.", level: "⭐⭐" },
+            { id: 161, word: "Persist", pos: "V", def: "Continue to exist", syn: "Continue, endure, prevail",
+                ex: "The problem persists despite efforts.", level: "⭐⭐" },
+            { id: 162, word: "Undergo", pos: "V", def: "Experience, go through", syn: "Experience, endure, face",
+                ex: "The country underwent major changes.", level: "⭐⭐" },
+            { id: 163, word: "Undertake", pos: "V", def: "Begin a task", syn: "Begin, initiate, commence",
+                ex: "They undertook a major study.", level: "⭐⭐" },
+            { id: 164, word: "Utilise", pos: "V", def: "Use effectively", syn: "Use, employ, apply",
+                ex: "We must utilise available resources.", level: "⭐⭐" },
+            { id: 165, word: "Via", pos: "Prep", def: "Through, by way of", syn: "Through, by means of, using",
+                ex: "Data was collected via surveys.", level: "⭐⭐" },
+            { id: 166, word: "Whereby", pos: "Adv", def: "By which", syn: "Through which, by which",
+                ex: "A system whereby citizens vote online.", level: "⭐⭐⭐" },
+            { id: 167, word: "Interim", pos: "Adj", def: "Temporary, provisional", syn: "Temporary, provisional, transitional",
+                ex: "An interim solution was adopted.", level: "⭐⭐⭐" },
+            { id: 168, word: "Ultimate", pos: "Adj", def: "Final, eventual", syn: "Final, eventual, conclusive",
+                ex: "The ultimate goal is sustainability.", level: "⭐⭐" },
+            { id: 169, word: "Preceding", pos: "Adj", def: "Coming before", syn: "Previous, prior, earlier",
+                ex: "The preceding year saw growth.", level: "⭐⭐" },
+            { id: 170, word: "Subsequent", pos: "Adj", def: "Coming after", syn: "Following, next, later",
+                ex: "The subsequent report confirmed findings.", level: "⭐⭐" },
+            { id: 171, word: "Concurrent", pos: "Adj", def: "Happening at same time", syn: "Simultaneous, coincident, parallel",
+                ex: "The events were concurrent.", level: "⭐⭐⭐" },
+            { id: 172, word: "Explicit", pos: "Adj", def: "Clear, detailed", syn: "Clear, direct, unambiguous",
+                ex: "The instructions are explicit.", level: "⭐⭐" },
+            { id: 173, word: "Implicit", pos: "Adj", def: "Implied, not stated", syn: "Implied, inferred, unspoken",
+                ex: "There is an implicit assumption.", level: "⭐⭐⭐" },
+            { id: 174, word: "Precise", pos: "Adj", def: "Exact, accurate", syn: "Exact, accurate, specific",
+                ex: "We need precise measurements.", level: "⭐⭐" },
+            { id: 175, word: "Rigorous", pos: "Adj", def: "Strict, thorough", syn: "Thorough, strict, detailed",
+                ex: "A rigorous assessment is required.", level: "⭐⭐⭐" },
+            { id: 176, word: "Robust", pos: "Adj", def: "Strong, reliable", syn: "Strong, reliable, sturdy",
+                ex: "The system is robust.", level: "⭐⭐" },
+            { id: 177, word: "Feasible", pos: "Adj", def: "Possible, achievable", syn: "Achievable, possible, realistic",
+                ex: "The plan is feasible.", level: "⭐⭐" },
+            { id: 178, word: "Plausible", pos: "Adj", def: "Believable, credible", syn: "Believable, credible, probable",
+                ex: "The theory is plausible.", level: "⭐⭐" },
+            { id: 179, word: "Questionable", pos: "Adj", def: "Doubtful", syn: "Doubtful, dubious, debatable",
+                ex: "The methodology is questionable.", level: "⭐⭐" },
+            { id: 180, word: "Ambiguous", pos: "Adj", def: "Unclear, vague", syn: "Vague, unclear, uncertain",
+                ex: "The wording is ambiguous.", level: "⭐⭐⭐" },
+            { id: 181, word: "Cohesive", pos: "Adj", def: "Unified, connected", syn: "Unified, connected, coherent",
+                ex: "A cohesive argument is needed.", level: "⭐⭐⭐" },
+            { id: 182, word: "Intrinsic", pos: "Adj", def: "Inherent, internal", syn: "Inherent, natural, essential",
+                ex: "There is intrinsic value in nature.", level: "⭐⭐⭐" },
+            { id: 183, word: "Extrinsic", pos: "Adj", def: "External, outside", syn: "External, outside, acquired",
+                ex: "Extrinsic rewards can motivate.", level: "⭐⭐⭐" },
+            { id: 184, word: "Tentative", pos: "Adj", def: "Temporary, provisional", syn: "Provisional, temporary, preliminary",
+                ex: "The findings are tentative.", level: "⭐⭐⭐" },
+            { id: 185, word: "Sophisticated", pos: "Adj", def: "Advanced, complex", syn: "Advanced, complex, refined",
+                ex: "A sophisticated approach is needed.", level: "⭐⭐⭐" },
+            { id: 186, word: "Hitherto", pos: "Adv", def: "Until now", syn: "Previously, formerly, until now",
+                ex: "Hitherto, this was unknown.", level: "⭐⭐⭐" },
+            { id: 187, word: "Henceforth", pos: "Adv", def: "From now on", syn: "From now on, thereafter, from this point",
+                ex: "Henceforth, new rules apply.", level: "⭐⭐⭐" },
+            { id: 188, word: "Insofar as", pos: "Conj", def: "To the extent that", syn: "As far as, to the degree that",
+                ex: "The plan is good insofar as it addresses safety.", level: "⭐⭐⭐" },
+            { id: 189, word: "Inasmuch as", pos: "Conj", def: "Because, considering", syn: "Since, because, considering",
+                ex: "Inasmuch as he was qualified, he got the job.", level: "⭐⭐⭐" },
+            { id: 190, word: "Ergo", pos: "Conj", def: "Therefore", syn: "Therefore, hence, consequently",
+                ex: "It's raining; ergo, we stay inside.", level: "⭐⭐⭐" },
+            { id: 191, word: "Thus", pos: "Adv", def: "Therefore", syn: "Therefore, hence, consequently",
+                ex: "The evidence was clear; thus, we acted.", level: "⭐⭐" },
+            { id: 192, word: "Concurrently", pos: "Adv", def: "At the same time", syn: "Simultaneously, at the same time",
+                ex: "The studies were run concurrently.", level: "⭐⭐⭐" },
+            { id: 193, word: "Sequentially", pos: "Adv", def: "In order", syn: "In order, consecutively, successively",
+                ex: "The steps must be done sequentially.", level: "⭐⭐⭐" },
+            { id: 194, word: "Interconnected", pos: "Adj", def: "Mutually linked", syn: "Interrelated, linked, connected",
+                ex: "These issues are interconnected.", level: "⭐⭐" },
+            { id: 195, word: "Akin to", pos: "Adj", def: "Similar to", syn: "Similar to, alike, analogous",
+                ex: "This is akin to a revolution.", level: "⭐⭐⭐" },
+            { id: 196, word: "Detrimental", pos: "Adj", def: "Harmful", syn: "Harmful, damaging, adverse",
+                ex: "Smoking is detrimental to health.", level: "⭐⭐" },
+            { id: 197, word: "Instrumental", pos: "Adj", def: "Important in achieving", syn: "Crucial, helpful, valuable",
+                ex: "She was instrumental in the project.", level: "⭐⭐⭐" },
+            { id: 198, word: "Pertinent", pos: "Adj", def: "Relevant", syn: "Relevant, related, applicable",
+                ex: "The information is pertinent to the case.", level: "⭐⭐⭐" },
+            { id: 199, word: "Reminiscent", pos: "Adj", def: "Evoking memories", syn: "Reminding, evocative, suggestive",
+                ex: "The painting is reminiscent of Van Gogh.", level: "⭐⭐⭐" },
+            { id: 200, word: "Superfluous", pos: "Adj", def: "Excessive, unnecessary", syn: "Unnecessary, excessive, redundant",
+                ex: "Some details are superfluous.", level: "⭐⭐⭐" },
+            { id: 201, word: "Complementary", pos: "Adj", def: "Completing, matching", syn: "Matching, harmonising, supplementary",
+                ex: "These are complementary skills.", level: "⭐⭐⭐" },
+            { id: 202, word: "Analogous", pos: "Adj", def: "Comparable, similar", syn: "Similar, comparable, parallel",
+                ex: "The situation is analogous to a previous crisis.", level: "⭐⭐⭐" },
+            { id: 203, word: "Attributable", pos: "Adj", def: "Caused by", syn: "Owing to, due to, credited to",
+                ex: "The success is attributable to hard work.", level: "⭐⭐⭐" },
+            { id: 204, word: "Commensurate", pos: "Adj", def: "In proportion, corresponding", syn: "Proportional, corresponding, equivalent",
+                ex: "Salary is commensurate with experience.", level: "⭐⭐⭐" },
+            { id: 205, word: "Conducive", pos: "Adj", def: "Making possible, favourable", syn: "Favourable, helpful, supportive",
+                ex: "A quiet room is conducive to study.", level: "⭐⭐⭐" },
+            { id: 206, word: "Deleterious", pos: "Adj", def: "Harmful", syn: "Harmful, damaging, detrimental",
+                ex: "Pollution has deleterious effects.", level: "⭐⭐⭐" },
+            { id: 207, word: "Indigenous", pos: "Adj", def: "Native, local", syn: "Native, original, local",
+                ex: "These plants are indigenous to the region.", level: "⭐⭐⭐" },
+            { id: 208, word: "Inextricably", pos: "Adv", def: "Inseparable, tightly linked", syn: "Inseparably, tightly, indissolubly",
+                ex: "Economy and environment are inextricably linked.", level: "⭐⭐⭐" },
+            { id: 209, word: "Predicated on", pos: "V", def: "Based on, reliant on", syn: "Based on, founded on, dependent on",
+                ex: "The plan is predicated on accurate data.", level: "⭐⭐⭐" },
+            { id: 210, word: "Premise", pos: "N", def: "Assumption, basis", syn: "Assumption, basis, foundation",
+                ex: "The premise of the argument is flawed.", level: "⭐⭐⭐" },
+            { id: 211, word: "Rationale", pos: "N", def: "Reason, logic", syn: "Reason, logic, justification",
+                ex: "The rationale behind the policy is sound.", level: "⭐⭐⭐" },
+            { id: 212, word: "Repercussion", pos: "N", def: "Unintended consequence", syn: "Consequence, ramification, backlash",
+                ex: "The decision had serious repercussions.", level: "⭐⭐⭐" },
+            { id: 213, word: "Stipulate", pos: "V", def: "Specify as a condition", syn: "Specify, require, lay down",
+                ex: "The contract stipulates a deadline.", level: "⭐⭐⭐" },
+            { id: 214, word: "Synthesise", pos: "V", def: "Combine to form a whole", syn: "Combine, integrate, amalgamate",
+                ex: "The essay synthesises multiple sources.", level: "⭐⭐⭐" },
+            { id: 215, word: "Vindicate", pos: "V", def: "Prove right", syn: "Justify, prove, validate",
+                ex: "The results vindicate our hypothesis.", level: "⭐⭐⭐" },
+            { id: 216, word: "Ambivalent", pos: "Adj", def: "Mixed feelings", syn: "Uncertain, conflicted, torn",
+                ex: "The public is ambivalent about the change.", level: "⭐⭐⭐" },
+            { id: 217, word: "Apt", pos: "Adj", def: "Suitable, appropriate", syn: "Suitable, fitting, appropriate",
+                ex: "This is an apt description.", level: "⭐⭐⭐" },
+            { id: 218, word: "Brevity", pos: "N", def: "Conciseness, short duration", syn: "Conciseness, shortness, economy",
+                ex: "The speech was praised for its brevity.", level: "⭐⭐⭐" },
+            { id: 219, word: "Cogent", pos: "Adj", def: "Clear, persuasive", syn: "Convincing, persuasive, compelling",
+                ex: "A cogent argument is needed.", level: "⭐⭐⭐" },
+            { id: 220, word: "Diligence", pos: "N", def: "Careful, persistent effort", syn: "Effort, perseverance, application",
+                ex: "Diligence is key to success.", level: "⭐⭐⭐" },
+            { id: 221, word: "Eloquent", pos: "Adj", def: "Fluent, persuasive in speech", syn: "Articulate, expressive, persuasive",
+                ex: "She gave an eloquent speech.", level: "⭐⭐⭐" },
+            { id: 222, word: "Fortuitous", pos: "Adj", def: "Happening by chance, lucky", syn: "Lucky, fortunate, accidental",
+                ex: "A fortuitous discovery was made.", level: "⭐⭐⭐" },
+            { id: 223, word: "Germane", pos: "Adj", def: "Relevant", syn: "Relevant, pertinent, fitting",
+                ex: "This point is germane to the discussion.", level: "⭐⭐⭐" },
+            { id: 224, word: "Holistic", pos: "Adj", def: "Whole, comprehensive", syn: "Comprehensive, all-encompassing",
+                ex: "A holistic approach is required.", level: "⭐⭐⭐" },
+            { id: 225, word: "Lucid", pos: "Adj", def: "Clear, easy to understand", syn: "Clear, coherent, intelligible",
+                ex: "The explanation was lucid.", level: "⭐⭐⭐" },
+            { id: 226, word: "Ostensible", pos: "Adj", def: "Apparent but possibly not true", syn: "Seeming, apparent, superficial",
+                ex: "The ostensible reason was cost.", level: "⭐⭐⭐" },
+            { id: 227, word: "Paramount", pos: "Adj", def: "Most important", syn: "Supreme, foremost, predominant",
+                ex: "Safety is paramount.", level: "⭐⭐⭐" },
+            { id: 228, word: "Transient", pos: "Adj", def: "Temporary, short-lived", syn: "Short-lived, temporary, fleeting",
+                ex: "This is a transient problem.", level: "⭐⭐⭐" },
+            { id: 229, word: "Unequivocal", pos: "Adj", def: "Absolute, clear", syn: "Absolute, definite, unambiguous",
+                ex: "The evidence is unequivocal.", level: "⭐⭐⭐" },
+            { id: 230, word: "Utilitarian", pos: "Adj", def: "Practical, functional", syn: "Practical, functional, useful",
+                ex: "The design is utilitarian.", level: "⭐⭐⭐" }
+        ];
+
+        // ============================================================
+        // DATA – BONUS: Top 50 Collocation Pairs
+        // ============================================================
+        const bonusCollocations = [
+            { pair: "take into consideration", type: "V+N", ex: "Take all factors into consideration." },
+            { pair: "make an effort", type: "V+N", ex: "Make an effort to improve." },
+            { pair: "draw attention to", type: "V+N", ex: "Draw attention to the issue." },
+            { pair: "reach an agreement", type: "V+N", ex: "Reach an agreement on the terms." },
+            { pair: "gain insight into", type: "V+N", ex: "Gain insight into the problem." },
+            { pair: "set a precedent", type: "V+N", ex: "This ruling sets a precedent." },
+            { pair: "yield results", type: "V+N", ex: "The study yielded positive results." },
+            { pair: "pose a risk", type: "V+N", ex: "Invasive species pose a risk." },
+            { pair: "foster development", type: "V+N", ex: "Foster economic development." },
+            { pair: "promote growth", type: "V+N", ex: "Promote sustainable growth." },
+            { pair: "combat inequality", type: "V+N", ex: "Combat income inequality." },
+            { pair: "bridge the gap", type: "V+N", ex: "Bridge the gap between rich and poor." },
+            { pair: "foster innovation", type: "V+N", ex: "Foster innovation in education." },
+            { pair: "stimulate the economy", type: "V+N", ex: "Stimulate the economy through investment." },
+            { pair: "curb pollution", type: "V+N", ex: "Curb pollution with new laws." },
+            { pair: "raise standards", type: "V+N", ex: "Raise educational standards." },
+            { pair: "maintain stability", type: "V+N", ex: "Maintain economic stability." },
+            { pair: "acknowledge a limitation", type: "V+N", ex: "Acknowledge the study's limitations." },
+            { pair: "verify a claim", type: "V+N", ex: "Verify the claim with evidence." },
+            { pair: "challenge a notion", type: "V+N", ex: "Challenge the notion that technology is harmful." },
+            { pair: "reflect a trend", type: "V+N", ex: "The data reflects a downward trend." },
+            { pair: "depict a pattern", type: "V+N", ex: "The chart depicts a seasonal pattern." },
+            { pair: "compare against", type: "V+Prep", ex: "Compare the data against benchmarks." },
+            { pair: "distinguish between", type: "V+Prep", ex: "Distinguish between correlation and causation." },
+            { pair: "align with", type: "V+Prep", ex: "The results align with expectations." },
+            { pair: "deviate from", type: "V+Prep", ex: "Deviate from the norm." },
+            { pair: "engage in", type: "V+Prep", ex: "Engage in collaborative research." },
+            { pair: "participate in", type: "V+Prep", ex: "Participate in the study." },
+            { pair: "persist in", type: "V+Prep", ex: "Persist in pursuing the goal." },
+            { pair: "invest in", type: "V+Prep", ex: "Invest in renewable energy." },
+            { pair: "cater to", type: "V+Prep", ex: "Cater to diverse needs." },
+            { pair: "adhere to", type: "V+Prep", ex: "Adhere to the guidelines." },
+            { pair: "conform to", type: "V+Prep", ex: "Conform to the standard." },
+            { pair: "correspond to", type: "V+Prep", ex: "The data corresponds to our predictions." },
+            { pair: "substitute for", type: "V+Prep", ex: "Substitute plastic for biodegradable materials." },
+            { pair: "compensate for", type: "V+Prep", ex: "Compensate for the loss." },
+            { pair: "prevail over", type: "V+Prep", ex: "Reason prevails over emotion." },
+            { pair: "triumph over", type: "V+Prep", ex: "Triumph over adversity." },
+            { pair: "a growing number of", type: "Adj+N", ex: "A growing number of students." },
+            { pair: "a wide range of", type: "Adj+N", ex: "A wide range of options." },
+            { pair: "a variety of", type: "Adj+N", ex: "A variety of factors." },
+            { pair: "an array of", type: "Adj+N", ex: "An array of opportunities." },
+            { pair: "considerable amount", type: "Adj+N", ex: "A considerable amount of time." },
+            { pair: "substantial difference", type: "Adj+N", ex: "A substantial difference was noted." },
+            { pair: "profound effect", type: "Adj+N", ex: "A profound effect on society." },
+            { pair: "minimal impact", type: "Adj+N", ex: "Minimal impact on the environment." },
+            { pair: "widespread adoption", type: "Adj+N", ex: "Widespread adoption of new technology." },
+            { pair: "significant progress", type: "Adj+N", ex: "Significant progress has been made." },
+            { pair: "considerable attention", type: "Adj+N", ex: "The issue received considerable attention." },
+            { pair: "close proximity", type: "Adj+N", ex: "In close proximity to the site." }
+        ];
+
+        // ============================================================
+        // DATA – Full Collocations by Section
+        // ============================================================
+        const collocSections = {
+            s1: [
+                "significant impact - The policy had a significant impact on poverty rates.",
+                "growing concern - There is growing concern about data privacy.",
+                "widespread belief - There is a widespread belief that exercise improves mood.",
+                "crucial role - Bees play a crucial role in pollination.",
+                "key factor - Education is a key factor in economic mobility.",
+                "fundamental principle - Equality is a fundamental principle of democratic societies.",
+                "major challenge - Climate change poses a major challenge for coastal cities.",
+                "potential benefits - Researchers highlighted the potential benefits of AI in medicine.",
+                "extensive research - Extensive research has linked sleep to memory consolidation.",
+                "robust evidence - There is robust evidence that smoking causes lung disease.",
+                "common practice - Recycling has become a common practice in modern cities.",
+                "urgent need - There is an urgent need for investment in public transport.",
+                "comprehensive review - The report provides a comprehensive review of the sector.",
+                "broad consensus - There is a broad consensus among scientists on this issue.",
+                "substantial increase - The data showed a substantial increase in solar installations.",
+                "rapid growth - The region has seen rapid growth in its technology sector.",
+                "critical issue - Water scarcity is a critical issue in arid regions.",
+                "vital importance - Sleep is of vital importance for cognitive performance.",
+                "complex process - Protein synthesis is a complex process.",
+                "long-term effects - The study examined the long-term effects of early education.",
+                "short-term gains - Short-term gains often come at the cost of long-term stability.",
+                "primary source - Solar energy is a primary source of renewable power.",
+                "secondary source - Journal articles are secondary sources in historical research.",
+                "central argument - The central argument of the paper is well-supported.",
+                "leading cause - Smoking is a leading cause of preventable death.",
+                "distinct advantage - Electric vehicles offer a distinct advantage in emissions.",
+                "inherent risk - There is an inherent risk in any new technology.",
+                "remarkable achievement - The telescope's launch was a remarkable achievement.",
+                "lasting impact - The reforms had a lasting impact on public education.",
+                "immediate consequences - The storm had immediate consequences for local infrastructure.",
+                "valuable insights - The report offered valuable insights into consumer trends.",
+                "reasonable explanation - The researcher provided a reasonable explanation for the results.",
+                "plausible hypothesis - The plausible hypothesis is that temperature drives migration.",
+                "compelling argument - The author makes a compelling argument for reform.",
+                "severe limitations - The study had severe limitations in sample size.",
+                "notable exception - Denmark is a notable exception to this European trend.",
+                "striking contrast - There is a striking contrast between urban and rural outcomes.",
+                "significant challenge - Retention of older workers remains a significant challenge.",
+                "relevant information - The report contains all the relevant information.",
+                "accurate data - The analysis requires accurate data from multiple sources.",
+                "sustainable development - Sustainable development balances growth with environmental care.",
+                "academic performance - Sleep quality is linked to academic performance.",
+                "economic growth - Economic growth has slowed in several advanced economies.",
+                "cultural diversity - Cultural diversity is a strength of modern universities.",
+                "global trade - Global trade patterns have shifted since 2020.",
+                "social inequality - Social inequality remains a pressing concern.",
+                "public awareness - Campaigns aim to raise public awareness of recycling.",
+                "human behaviour - Human behaviour is shaped by both genetics and environment.",
+                "natural resources - Many economies depend heavily on natural resources."
+            ],
+            s2: [
+                "conduct research - The team conducted research on deep-sea ecosystems.",
+                "raise awareness - The initiative aims to raise awareness of mental health.",
+                "reach a consensus - The committee reached a consensus after long debate.",
+                "reach a conclusion - The researchers reached a conclusion after three years.",
+                "draw a conclusion - We cannot yet draw a firm conclusion from limited data.",
+                "draw attention - The study draws attention to inequality in healthcare.",
+                "provide evidence - The fossil record provides evidence of rapid evolution.",
+                "provide insight - The research provides insight into consumer decision-making.",
+                "play a role - Language plays a role in shaping cultural identity.",
+                "pose a threat - Invasive species pose a threat to local biodiversity.",
+                "pose a challenge - Aging populations pose a challenge for healthcare systems.",
+                "take action - Governments must take action on climate change.",
+                "take measures - The company took measures to reduce emissions.",
+                "make progress - The team has made significant progress on the project.",
+                "make a decision - Investors must make a decision based on available information.",
+                "make a contribution - She made a major contribution to the field.",
+                "express an opinion - Participants were invited to express an opinion.",
+                "carry out a study - Researchers carried out a study on urban sleep patterns.",
+                "gather information - The survey gathered information from 5,000 households.",
+                "obtain permission - Researchers obtained permission before contacting participants.",
+                "launch a campaign - The charity launched a campaign to improve literacy.",
+                "implement a policy - The city implemented a policy to reduce plastic waste.",
+                "adopt an approach - The school adopted a new approach to assessment.",
+                "achieve a goal - Most students struggle to achieve this goal without support.",
+                "meet a target - The company failed to meet its emissions target.",
+                "meet demand - Supply could not meet demand during the peak season.",
+                "meet a need - The new service aims to meet a growing need.",
+                "overcome obstacles - Startups often have to overcome significant obstacles.",
+                "tackle a problem - Policymakers must tackle the problem of affordable housing.",
+                "address an issue - The report addresses the issue of workplace stress.",
+                "face challenges - Rural hospitals face particular challenges with staffing.",
+                "solve a problem - Technology alone cannot solve this problem.",
+                "ask a question - The journalist asked a direct question.",
+                "answer a question - The spokesperson refused to answer the question.",
+                "raise a question - These results raise important questions about the method.",
+                "give an example - Let me give an example of how this works in practice.",
+                "set an example - The CEO wanted to set an example through her actions.",
+                "follow a pattern - The migration follows a predictable seasonal pattern.",
+                "break a record - The athlete broke the world record in 2023.",
+                "save time - Using templates can save time during preparation.",
+                "save money - Switching suppliers could save the business money.",
+                "spend time - They spend time reviewing every submission.",
+                "gain experience - Interns gain valuable experience during placement.",
+                "gain access - Only authorised staff gain access to the database.",
+                "lose interest - Students lose interest when lessons are not engaging.",
+                "pay attention - Drivers must pay attention to road conditions.",
+                "take responsibility - Managers should take responsibility for their decisions.",
+                "take advantage - Some companies take advantage of tax loopholes.",
+                "take risks - Successful entrepreneurs take calculated risks.",
+                "meet expectations - The film failed to meet audience expectations."
+            ],
+            s3: [
+                "climate change - Climate change is reshaping coastal ecosystems.",
+                "population growth - Population growth places pressure on urban services.",
+                "market demand - Market demand for electric vehicles is rising quickly.",
+                "consumer behaviour - Consumer behaviour has shifted since the pandemic.",
+                "policy framework - A robust policy framework is essential for implementation.",
+                "research findings - The research findings were published in Nature.",
+                "data analysis - The report includes detailed data analysis.",
+                "supply chain - Global supply chains were disrupted during the crisis.",
+                "income inequality - Income inequality has widened in many developed economies.",
+                "gender equality - Gender equality remains a key policy objective.",
+                "human rights - Human rights principles underpin the convention.",
+                "public opinion - Public opinion has shifted on this issue.",
+                "government policy - Government policy has strongly favoured renewable energy.",
+                "market value - The company's market value has doubled since 2022.",
+                "job opportunity - The region offers many job opportunities in technology.",
+                "life expectancy - Life expectancy has risen steadily in most countries.",
+                "risk factor - Smoking is a major risk factor for heart disease.",
+                "case study - The report includes a case study of Copenhagen.",
+                "time frame - The project has a tight time frame.",
+                "role model - Teachers serve as role models for young students.",
+                "peer pressure - Peer pressure strongly influences adolescent behaviour.",
+                "quality control - Strict quality control is essential in manufacturing.",
+                "customer service - Good customer service builds brand loyalty.",
+                "family background - Family background influences educational outcomes.",
+                "decision-making - Decision-making under uncertainty is a core skill."
+            ],
+            s4: [
+                "highly effective - The intervention was highly effective.",
+                "highly controversial - The policy remains highly controversial.",
+                "widely recognised - Her work is widely recognised in the field.",
+                "widely accepted - The theory is widely accepted among biologists.",
+                "deeply rooted - The tradition is deeply rooted in local culture.",
+                "deeply concerned - Residents are deeply concerned about flooding.",
+                "closely linked - The two variables are closely linked.",
+                "closely related - These species are closely related.",
+                "extremely important - Early detection is extremely important.",
+                "extremely difficult - Quitting smoking can be extremely difficult.",
+                "fundamentally different - The two models are fundamentally different.",
+                "fundamentally changed - The internet has fundamentally changed how we communicate.",
+                "significantly higher - Rural infection rates were significantly higher.",
+                "significantly lower - The new design has significantly lower energy use.",
+                "perfectly suited - The soil is perfectly suited to vineyards.",
+                "entirely dependent - The region is entirely dependent on seasonal tourism.",
+                "partly responsible - Industrial emissions are partly responsible for smog.",
+                "directly involved - The CEO was directly involved in the negotiations.",
+                "strongly influenced - The painter was strongly influenced by Impressionism.",
+                "strictly prohibited - Smoking is strictly prohibited in all public buildings.",
+                "relatively stable - The economy has remained relatively stable.",
+                "remarkably similar - The two languages are remarkably similar.",
+                "increasingly popular - Electric bikes are becoming increasingly popular.",
+                "readily available - Information is now readily available online.",
+                "universally acknowledged - The threat is universally acknowledged by experts."
+            ],
+            s5: [
+                "aware of - Investors should be aware of the risks.",
+                "consistent with - The data is consistent with earlier studies.",
+                "responsible for - Local councils are responsible for waste collection.",
+                "subject to - All applications are subject to review.",
+                "dependent on - The economy is dependent on seasonal tourism.",
+                "opposed to - Many residents are opposed to the new proposal.",
+                "relevant to - These findings are relevant to urban planners.",
+                "similar to - This method is similar to previous approaches.",
+                "essential to - Good sleep is essential to cognitive function.",
+                "vulnerable to - Coastal cities are vulnerable to flooding.",
+                "capable of - The new device is capable of measuring at nano-scale.",
+                "typical of - This behaviour is typical of the species.",
+                "critical of - The report was critical of current regulations.",
+                "familiar with - Students should be familiar with the format.",
+                "different from - This approach is different from traditional methods.",
+                "compatible with - The software is compatible with most systems.",
+                "accessible to - The service is accessible to everyone.",
+                "beneficial to - Exercise is beneficial to both body and mind.",
+                "suitable for - This material is suitable for outdoor use.",
+                "proud of - The team is proud of their achievement."
+            ],
+            s6: [
+                "contribute to - Regular exercise contributes to mental health.",
+                "result in - The policy resulted in lower emissions.",
+                "rely on - Many communities rely on seasonal rainfall.",
+                "depend on - The outcome depends on cooperation.",
+                "account for - This factor accounts for most of the variation.",
+                "focus on - The chapter focuses on industrial policy.",
+                "refer to - The author refers to several classic studies.",
+                "deal with - The book deals with environmental law.",
+                "cope with - Families struggle to cope with rising costs.",
+                "benefit from - Students benefit from small class sizes.",
+                "suffer from - Many elderly people suffer from chronic loneliness."
+            ],
+            s7: [
+                "an increase in - There was an increase in public investment.",
+                "a decline in - The report showed a decline in readership.",
+                "a rise in - A rise in global temperatures has been recorded.",
+                "a fall in - A fall in employment followed the closures.",
+                "approach to - The new approach to treatment shows promise.",
+                "access to - Equal access to education is a key objective.",
+                "demand for - Demand for sustainable products continues to grow.",
+                "response to - The rapid response to the outbreak saved lives.",
+                "lack of - A lack of data hampered the investigation.",
+                "alternative to - Cycling is a healthy alternative to driving."
+            ],
+            s8: [
+                "significant increase - The data showed a significant increase in sales.",
+                "widespread belief - There is a widespread belief that education is key.",
+                "crucial role - Technology plays a crucial role in modern life.",
+                "growing concern - There is growing concern about the environment.",
+                "key factor - Time management is a key factor for success.",
+                "market trends - Analysts study market trends to predict changes.",
+                "sharp increase - There was a sharp increase in prices.",
+                "conduct research - Scientists conduct research on climate change.",
+                "raise awareness - The campaign aims to raise awareness about health.",
+                "reach a conclusion - We need more data to reach a conclusion.",
+                "draw attention - The study draws attention to the issue.",
+                "provide evidence - The report provides evidence of improvement.",
+                "climate change - Climate change is a global challenge.",
+                "policy framework - A policy framework guides decision-making.",
+                "population growth - Population growth affects resources.",
+                "research findings - The research findings were surprising.",
+                "highly effective - This method is highly effective.",
+                "widely recognized - The expert is widely recognized in the field.",
+                "deeply rooted - The custom is deeply rooted in tradition.",
+                "fundamentally different - These concepts are fundamentally different.",
+                "closely linked - Health and diet are closely linked.",
+                "consistent with - The results are consistent with the hypothesis.",
+                "responsible for - The manager is responsible for the project.",
+                "aware of - Everyone should be aware of the risks.",
+                "subject to - The proposal is subject to approval.",
+                "dependent on - Success is dependent on effort.",
+                "contribute to - Exercise contributes to good health.",
+                "result in - The changes resulted in improvements.",
+                "rely on - We rely on data for decisions.",
+                "account for - This factor accounts for the difference.",
+                "focus on - The presentation will focus on key issues."
+            ],
+            trap: [
+                "draw a conclusion → ❌ make a conclusion",
+                "reach a conclusion → ❌ do a conclusion",
+                "provide evidence → ❌ give evidence",
+                "pose a threat → ❌ make a threat",
+                "take action → ❌ make action",
+                "raise awareness → ❌ create awareness",
+                "consistent with → ❌ consistent to",
+                "responsible for → ❌ responsible of",
+                "subject to → ❌ subject of",
+                "contribute to → ❌ contribute for",
+                "result in → ❌ result to",
+                "depend on → ❌ depend of"
+            ]
+        };
+
+        // ============================================================
+        // RENDER FUNCTIONS
+        // ============================================================
+
+        function renderTable(targetId, data) {
+            const tbody = document.getElementById(targetId);
+            if (!tbody) return;
+            let html = '';
+            data.forEach(item => {
+                const levelClass = item.level === '⭐' ? 'easy' : item.level === '⭐⭐' ? 'medium' : 'hard';
+                html += `<tr>
+                            <td>${item.id}</td>
+                            <td><strong>${item.word}</strong></td>
+                            <td><span class="pos-tag">${item.pos}</span></td>
+                            <td>${item.def}</td>
+                            <td>${item.syn}</td>
+                            <td class="example">${item.ex}</td>
+                            <td><span class="level-star ${levelClass}">${item.level}</span></td>
+                        </tr>`;
+            });
+            tbody.innerHTML = html;
+        }
+
+        function renderCollocGrid(targetId, items, limit) {
+            const container = document.getElementById(targetId);
+            if (!container) return;
+            const list = limit ? items.slice(0, limit) : items;
+            let html = '';
+            list.forEach(item => {
+                if (typeof item === 'string') {
+                    const parts = item.split(' - ');
+                    const pair = parts[0] || item;
+                    const ex = parts[1] || '';
+                    html += `<div class="colloc-item">
+                                <span class="colloc-pair">${pair}</span>
+                                ${ex ? `<span class="colloc-example">— ${ex}</span>` : ''}
+                            </div>`;
+                } else {
+                    html += `<div class="colloc-item">
+                                <span class="colloc-type">${item.type || ''}</span>
+                                <span class="colloc-pair">${item.pair}</span>
+                                <span class="colloc-example">— ${item.ex}</span>
+                            </div>`;
+                }
+            });
+            container.innerHTML = html;
+        }
+
+        function renderCollocSection(sectionId, dataArray) {
+            const container = document.getElementById(sectionId);
+            if (!container) return;
+            let html = '';
+            dataArray.forEach(item => {
+                const parts = item.split(' - ');
+                const pair = parts[0] || item;
+                const ex = parts[1] || '';
+                html += `<div class="colloc-item">
+                            <span class="colloc-pair">${pair}</span>
+                            ${ex ? `<span class="colloc-example">— ${ex}</span>` : ''}
+                        </div>`;
+            });
+            container.innerHTML = html;
+        }
+
+        // ============================================================
+        // INIT
+        // ============================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTable('group1-body', group1Data);
+            renderTable('group2-body', group2Data);
+            renderTable('group3-body', group3Data);
+            renderCollocGrid('colloc-grid', bonusCollocations);
+            renderCollocSection('colloc-s1-grid', collocSections.s1);
+            renderCollocSection('colloc-s2-grid', collocSections.s2);
+            renderCollocSection('colloc-s3-grid', collocSections.s3);
+            renderCollocSection('colloc-s4-grid', collocSections.s4);
+            renderCollocSection('colloc-s5-grid', collocSections.s5);
+            renderCollocSection('colloc-s6-grid', collocSections.s6);
+            renderCollocSection('colloc-s7-grid', collocSections.s7);
+            renderCollocSection('colloc-s8-grid', collocSections.s8);
+            renderCollocSection('colloc-trap-grid', collocSections.trap);
+        });
+    </script>
+
+</body>
+</html>

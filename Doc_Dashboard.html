@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTE Practice · Documentation</title>
+  <style>
+    /* ============================================================
+       Exact same reset, variables, topbar, card, layout
+       as index.html – keeps the visual design consistent.
+       ============================================================ */
+    :root {
+      --pearson-blue: #047a9c;
+      --ink-blue: #005a70;
+      --ice-blue: #daf0ed;
+      --turquoise: #19a5a3;
+      --sunshine: #ffb81c;
+      --sunflower: #ff9a19;
+      --white: #ffffff;
+      --white-gray: #f5f5f5;
+      --moonlight: #ededed;
+      --charcoal: #252525;
+      --graphite: #505759;
+      --medium-gray: #6a7070;
+      --concrete: #c9cccc;
+      --success: #1f8a4c;
+      --success-bg: #e7f5ec;
+      --danger: #c23934;
+      --danger-bg: #fbebea;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+    font-size: 17px;
+      margin: 0;
+      background: var(--white-gray);
+      color: var(--charcoal);
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* ---------- top bar (same as dashboard) ---------- */
+    .topbar {
+      background: var(--pearson-blue);
+      color: var(--white);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 20.5px;
+    }
+
+    .logo-mark {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--sunshine);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--charcoal);
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 16px;
+    }
+
+    /* ---------- page container ---------- */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 24px 60px;
+    }
+
+    /* ---------- welcome / hero ---------- */
+    .welcome {
+      background: linear-gradient(120deg, var(--ink-blue) 0%, var(--pearson-blue) 100%);
+      color: var(--white);
+      border-radius: 8px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .welcome h1 { margin: 0 0 6px; font-size: 27.5px; }
+    .welcome p { margin: 0; font-size: 16px; color: #e3f2f5; max-width: 520px; }
+
+    .section-title {
+      font-size: 18.5px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 4px 0 14px;
+    }
+
+    /* ---------- card grid (exact same as dashboard) ---------- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .cat-card {
+      background: var(--white);
+      border: 1px solid var(--concrete);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cat-icon {
+      width: 42px; height: 42px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-weight: 700; font-size: 16px;
+    }
+    .icon-blue { background: var(--pearson-blue); }
+    .icon-turq { background: var(--turquoise); }
+    .icon-ink { background: var(--ink-blue); }
+    .icon-gold { background: var(--sunshine); color: var(--charcoal); }
+
+    .cat-card h3 { margin: 0; font-size: 18.5px; }
+    .cat-card .desc { font-size: 15px; color: var(--medium-gray); margin: 0; }
+
+    .cat-meta {
+      display: flex;
+      gap: 14px;
+      font-size: 14px;
+      color: var(--graphite);
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary { background: var(--pearson-blue); color: var(--white); }
+    .btn-primary:hover { background: var(--ink-blue); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--graphite);
+      border: 1px solid var(--concrete);
+    }
+    .btn-outline:hover { border-color: var(--graphite); }
+
+    .btn-sm { font-size: 14px; padding: 6px 14px; }
+    .btn-sunshine { background: var(--sunshine); color: var(--charcoal); }
+    .btn-sunshine:hover { background: var(--sunflower); }
+
+    /* ---------- detail panel (dynamically shown) ---------- */
+    .detail-panel {
+      background: var(--white);
+      border: 1px solid var(--concrete);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .detail-panel h2 {
+      font-size: 23px;
+      margin: 0 0 6px;
+      color: var(--charcoal);
+    }
+
+    .detail-panel .sub {
+      font-size: 16px;
+      color: var(--medium-gray);
+      margin-bottom: 18px;
+    }
+
+    .detail-panel .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 24px;
+      background: var(--white-gray);
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin-bottom: 18px;
+    }
+    .detail-panel .meta-grid .label { font-weight: 600; font-size: 15px; color: var(--graphite); }
+    .detail-panel .meta-grid .value { font-size: 16px; color: var(--charcoal); }
+
+    .detail-panel .markdown {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--charcoal);
+    }
+    .detail-panel .markdown code {
+      background: var(--moonlight);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+    .detail-panel .markdown pre {
+      background: var(--white-gray);
+      padding: 14px 18px;
+      border-radius: 6px;
+      overflow: auto;
+      font-size: 15px;
+      border: 1px solid var(--moonlight);
+    }
+    .detail-panel .markdown ul, .detail-panel .markdown ol { padding-left: 22px; }
+    .detail-panel .markdown li { margin-bottom: 4px; }
+
+    .detail-panel .back-row {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--moonlight);
+      display: flex;
+      gap: 12px;
+    }
+
+    .badge {
+      font-size: 12.5px; font-weight: 700; padding: 3px 9px; border-radius: 10px;
+      text-transform: uppercase; letter-spacing: 0.3px;
+    }
+    .badge-doc { background: var(--ice-blue); color: var(--ink-blue); }
+    .badge-overview { background: #fff2d9; color: #8a5a00; }
+
+    /* ---------- hidden utility ---------- */
+    .hidden { display: none !important; }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: var(--medium-gray);
+      padding: 18px 10px 6px;
+      border-top: 1px solid var(--moonlight);
+      margin-top: 18px;
+    }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 600px) {
+      .detail-panel .meta-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     TOP BAR (identical to index.html)
+     ============================================================ -->
+<div class="topbar">
+  <div class="logo">
+    <span class="logo-mark">P</span>
+    PTE Practice
+  </div>
+  <div class="topbar-right">
+    <span>Documentation</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     MAIN PAGE – always visible
+     ============================================================ -->
+<div id="view-dashboard" class="page">
+
+  <div class="welcome">
+    <h1>📘 PTE Practice – Documentation</h1>
+    <p>Overview of the app architecture, data flow, and how to extend it.</p>
+  </div>
+
+  <div class="section-title">Quick links</div>
+  <div class="card-grid" id="doc-grid">
+    <!-- cards are rendered from JavaScript data -->
+  </div>
+
+  <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+    <button class="btn btn-sunshine" id="back-to-app-btn">← Back to the practice app</button>
+    <button class="btn btn-outline" id="reset-session-btn" style="background:var(--white);">Reset session (if stuck)</button>
+  </div>
+
+  <footer>Demo page · not affiliated with or endorsed by Pearson · Documentation</footer>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT – dynamic cards + detail view
+     ============================================================ -->
+<script>
+  (function() {
+    "use strict";
+
+    // ------------------------------------------------------------
+    // 1. DATA – documentation entries (exactly like category cards)
+    //    Each entry has an id, title, description, icon, and a
+    //    detail object that will be rendered in the detail panel.
+    // ------------------------------------------------------------
+    const DOC_ENTRIES = [
+      {
+        id: "getting-your-bearings",
+        title: "Day 1 – Getting Your Bearings",
+        description: "Orientation: exam format, timing, and how to navigate PTE Academic.",
+        icon: "🧭",
+        iconClass: "icon-blue",
+        file: "Getting_Your_Bearings.html"
+      },
+      {
+        id: "speaking",
+        title: "Day 2 – Speaking",
+        description: "Speaking task types, templates, and practice drills.",
+        icon: "🎙️",
+        iconClass: "icon-turq",
+        file: "Speaking.html"
+      },
+      {
+        id: "writing-reading",
+        title: "Day 3 – Writing & Reading",
+        description: "Writing and Reading task strategies and practice.",
+        icon: "✍️",
+        iconClass: "icon-ink",
+        file: "Writing___Reading.html"
+      },
+      {
+        id: "listening",
+        title: "Day 4 – Listening",
+        description: "Listening task types, note‑taking, and practice drills.",
+        icon: "🎧",
+        iconClass: "icon-gold",
+        file: "Listening.html"
+      },
+      {
+        id: "vocabulary",
+        title: "Vocabulary & Collocations",
+        description: "Master list of high‑frequency vocabulary and collocations.",
+        icon: "📚",
+        iconClass: "icon-blue",
+        file: "Vocabulary___Collocations_Master_List.html"
+      },
+      {
+        id: "high-score-strategies",
+        title: "High‑Score Strategies",
+        description: "Advanced tactics to maximise your overall score.",
+        icon: "🏆",
+        iconClass: "icon-turq",
+        file: "High_Score_Strategies.html"
+      }
+    ];
+
+    // ------------------------------------------------------------
+    // 2. RENDER DASHBOARD CARDS (exact same pattern as index.html)
+    // ------------------------------------------------------------
+    function renderDashboard() {
+      const grid = document.getElementById("doc-grid");
+      grid.innerHTML = "";
+
+      DOC_ENTRIES.forEach(entry => {
+        const card = document.createElement("div");
+        card.className = "cat-card";
+
+        card.innerHTML = `
+          <div class="cat-icon ${entry.iconClass}">${entry.icon}</div>
+          <h3>${entry.title}</h3>
+          <p class="desc">${entry.description}</p>
+          <div class="cat-meta">
+          </div>
+          <button class="btn btn-primary btn-sm">Open</button>
+        `;
+
+        card.querySelector("button").addEventListener("click", () => {
+          window.open(entry.file, "_blank");
+        });
+
+        grid.appendChild(card);
+      });
+    }
+
+    // ------------------------------------------------------------
+    // 3. GLOBAL NAVIGATION WIRING
+    // ------------------------------------------------------------
+    function wireNavigation() {
+      // The "back to app" button is always in the dashboard
+      document.getElementById("back-to-app-btn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+
+      // Reset session (clears localStorage and reloads)
+      document.getElementById("reset-session-btn").addEventListener("click", () => {
+        if (confirm("Reset the 15‑minute session? This will clear all session progress.")) {
+          localStorage.removeItem("pte_session_state");
+          localStorage.removeItem("pte_scores");
+          // also clear any quiz state
+          sessionStorage.clear();
+          alert("Session reset. The page will now reload.");
+          window.location.reload();
+        }
+      });
+    }
+
+    // ------------------------------------------------------------
+    // 4. INIT
+    // ------------------------------------------------------------
+    function init() {
+      renderDashboard();
+      wireNavigation();
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+  })();
+</script>
+</body>
+</html>

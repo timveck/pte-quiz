@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTE Academic 2026 · Day 2 – Speaking</title>
+    <style>
+        /* –––––––––––––––––– RESET & ROOT –––––––––––––––––– */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --pearson-blue: #047a9c;
+            --ink-blue: #005a70;
+            --ice-blue: #daf0ed;
+            --turquoise: #19a5a3;
+            --sunshine: #ffb81c;
+            --sunflower: #ff9a19;
+            --white: #ffffff;
+            --white-gray: #f5f5f5;
+            --moonlight: #ededed;
+            --charcoal: #252525;
+            --graphite: #505759;
+            --medium-gray: #6a7070;
+            --concrete: #c9cccc;
+            --success: #1f8a4c;
+            --success-bg: #e7f5ec;
+            --danger: #c23934;
+            --danger-bg: #fbebea;
+            --font: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+    font-size: 17px;
+            font-family: var(--font);
+            background: var(--white-gray);
+            color: var(--charcoal);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.5;
+        }
+
+        a {
+            color: var(--pearson-blue);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 28px 24px 60px;
+        }
+
+        /* –––––––––––––––––– TOP BAR –––––––––––––––––– */
+        .topbar {
+            background: var(--pearson-blue);
+            color: var(--white);
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 20.5px;
+        }
+
+        .logo-mark {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--sunshine);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 16px;
+        }
+
+        .topbar-right a {
+            color: var(--white);
+            opacity: 0.85;
+        }
+        .topbar-right a:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        /* –––––––––––––––––– HERO / BANNER –––––––––––––––––– */
+        .hero {
+            background: linear-gradient(120deg, var(--ink-blue) 0%, var(--pearson-blue) 100%);
+            color: var(--white);
+            border-radius: 8px;
+            padding: 32px 32px 28px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 4px;
+        }
+
+        .hero .sub {
+            font-size: 18.5px;
+            opacity: 0.9;
+            font-weight: 400;
+            margin: 0 0 8px;
+        }
+
+        .hero .meta {
+            font-size: 16px;
+            opacity: 0.8;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 6px;
+        }
+
+        .hero .meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* –––––––––––––––––– SECTION CARD –––––––––––––––––– */
+        .section-card {
+            background: var(--white);
+            border: 1px solid var(--concrete);
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-bottom: 22px;
+            transition: box-shadow 0.15s;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        .section-card .heading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .section-card .heading .badge {
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            background: var(--moonlight);
+            color: var(--graphite);
+        }
+
+        .section-card .heading .badge-blue {
+            background: var(--ice-blue);
+            color: var(--ink-blue);
+        }
+
+        .section-card .heading .badge-gold {
+            background: #fff2d9;
+            color: #8a5a00;
+        }
+
+        .section-card .heading .badge-turq {
+            background: #e6f3f2;
+            color: var(--turquoise);
+        }
+
+        .section-card h2 {
+            font-size: 23px;
+            font-weight: 700;
+            margin: 0 0 2px;
+            color: var(--charcoal);
+        }
+
+        .section-card h3 {
+            font-size: 18.5px;
+            font-weight: 600;
+            margin: 16px 0 6px;
+            color: var(--charcoal);
+        }
+
+        .section-card p,
+        .section-card li {
+            color: var(--graphite);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .section-card ul,
+        .section-card ol {
+            padding-left: 22px;
+            margin: 6px 0 8px;
+        }
+
+        .section-card li {
+            margin-bottom: 4px;
+        }
+
+        .section-card .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .section-card .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section-card .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 700px) {
+            .section-card .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 450px) {
+            .section-card .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pill {
+            display: inline-block;
+            background: var(--moonlight);
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--graphite);
+        }
+
+        .pill-blue {
+            background: var(--ice-blue);
+            color: var(--ink-blue);
+        }
+
+        .pill-gold {
+            background: #fff2d9;
+            color: #8a5a00;
+        }
+
+        .pill-green {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .pill-turq {
+            background: #e6f3f2;
+            color: var(--turquoise);
+        }
+
+        .pill-red {
+            background: var(--danger-bg);
+            color: var(--danger);
+        }
+
+        /* –––––– task list –––––– */
+        .task-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 8px 16px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--moonlight);
+        }
+
+        .task-item:last-child {
+            border-bottom: none;
+        }
+
+        .task-item .task-name {
+            font-weight: 600;
+            font-size: 17px;
+            min-width: 180px;
+            color: var(--charcoal);
+        }
+
+        .task-item .task-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 12px;
+            font-size: 15px;
+            color: var(--medium-gray);
+        }
+
+        .task-item .task-meta .priority {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12.5px;
+        }
+
+        .priority-top {
+            color: #8a5a00;
+        }
+        .priority-high {
+            color: var(--ink-blue);
+        }
+        .priority-medium {
+            color: var(--graphite);
+        }
+
+        /* –––––– warm-up cards –––––– */
+        .warmup {
+            background: var(--white-gray);
+            border-radius: 6px;
+            padding: 18px 20px;
+            border: 1px solid var(--moonlight);
+        }
+
+        .warmup .timer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--charcoal);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 14px;
+            padding: 3px 12px;
+            border-radius: 14px;
+            margin-bottom: 8px;
+        }
+
+        .warmup .coach-tip {
+            background: var(--ice-blue);
+            border-radius: 4px;
+            padding: 10px 14px;
+            font-size: 15px;
+            color: var(--ink-blue);
+            margin-top: 10px;
+            border-left: 3px solid var(--pearson-blue);
+        }
+
+        .warmup .video-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--pearson-blue);
+        }
+
+        /* –––––– divider –––––– */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--moonlight);
+            margin: 18px 0 16px;
+        }
+
+        /* –––––– roadmap –––––– */
+        .roadmap {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 12px 0 4px;
+        }
+
+        .roadmap .step {
+            background: var(--white-gray);
+            border-radius: 6px;
+            padding: 12px 16px;
+            flex: 1 0 160px;
+            border: 1px solid var(--moonlight);
+        }
+
+        .roadmap .step .day {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--charcoal);
+        }
+
+        .roadmap .step .desc {
+            font-size: 15px;
+            color: var(--medium-gray);
+        }
+
+        .roadmap .step.active {
+            background: #fff9e6;
+            border-color: var(--sunshine);
+        }
+
+        .roadmap .step.active .day {
+            color: #8a5a00;
+        }
+
+        /* –––––– footer –––––– */
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: var(--medium-gray);
+            padding: 18px 10px 6px;
+            border-top: 1px solid var(--moonlight);
+            margin-top: 18px;
+        }
+
+        /* –––––– utils –––––– */
+        .text-sm {
+            font-size: 15px;
+            color: var(--medium-gray);
+        }
+
+        .mt-8 {
+            margin-top: 8px;
+        }
+
+        .mt-12 {
+            margin-top: 12px;
+        }
+
+        .mb-6 {
+            margin-bottom: 6px;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .inline-code {
+            background: var(--moonlight);
+            padding: 1px 8px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <header class="topbar">
+        <div class="logo">
+            <span class="logo-mark">P</span>
+            PTE Academic 2026
+        </div>
+        <div class="topbar-right">
+            <span>Day 2 · Speaking</span>
+            <a href="#">Coach Guide</a>
+        </div>
+    </header>
+
+    <!-- ===== PAGE ===== -->
+    <div class="page">
+
+        <!-- HERO -->
+        <div class="hero">
+            <h1>Speaking</h1>
+            <div class="sub">8 spoken tasks · Calm, practical guidance for at‑home practice with your coach</div>
+            <div class="meta">
+                <span>🎙️ All spoken tasks today</span>
+                <span>📘 Day 2 of 4</span>
+            </div>
+        </div>
+
+        <!-- ===== 1. TODAY'S SPEAKING TASKS (OVERVIEW) ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Today's Speaking Tasks</h2>
+                <span class="badge badge-blue">Overview</span>
+            </div>
+
+            <div class="task-item">
+                <span class="task-name">Personal Intro</span>
+                <span class="task-meta"><span class="pill pill-blue">Warm‑Up</span></span>
+            </div>
+            <div class="task-item">
+                <span class="task-name">Read Aloud</span>
+                <span class="task-meta"><span class="pill pill-gold">Top Priority</span></span>
+            </div>
+            <div class="task-item">
+                <span class="task-name">Repeat Sentence</span>
+                <span class="task-meta"><span class="pill pill-gold">Top Priority</span></span>
+            </div>
+            <div class="task-item">
+                <span class="task-name">Describe Image</span>
+                <span class="task-meta"><span class="pill pill-gold">High Priority</span></span>
+            </div>
+            <div class="task-item">
+                <span class="task-name">Retell Lecture</span>
+                <span class="task-meta"><span class="pill pill-gold">High Priority</span></span>
+            </div>
+            <div class="task-item">
+                <span class="task-name">Answer Short Question</span>
+                <span class="task-meta"><span class="pill pill-blue">Medium Priority</span></span>
+            </div>
+            <div class="task-item">
+                <span class="task-name">Summarize Group Discussion</span>
+                <span class="task-meta"><span class="pill pill-gold">High Priority</span> <span style="color:var(--danger);font-size:14px;font-weight:600;">NEW 2026</span></span>
+            </div>
+            <div class="task-item">
+                <span class="task-name">Respond to a Situation</span>
+                <span class="task-meta"><span class="pill pill-gold">High Priority</span> <span style="color:var(--danger);font-size:14px;font-weight:600;">NEW 2026</span></span>
+            </div>
+
+            <div class="text-sm mt-8">
+                <strong>Test tip:</strong> Tasks appear in this exact order on exam day. The two new tasks — Summarize Group Discussion and Respond to a Situation — were added in the 2026 update. Prioritise Top and High priority tasks in your practice.
+            </div>
+            <div class="flex mt-8">
+                <span class="pill pill-gold">Top Priority</span>
+                <span class="pill pill-gold">High Priority</span>
+                <span class="pill pill-blue">Medium Priority</span>
+                <span class="pill">Warm‑Up</span>
+            </div>
+        </div>
+
+        <!-- ===== 2. PERSONAL INTRODUCTION (WARM-UP) ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Personal Introduction</h2>
+                <span class="badge badge-blue">Warm‑Up</span>
+            </div>
+            <div class="flex">
+                <span class="pill">25s prepare</span>
+                <span class="pill">30s record</span>
+            </div>
+            <p>This task is <strong>not scored</strong>, but your recording is sent to the institutions you apply to. Think of it as a first impression.</p>
+            <p>You will have 25 seconds to prepare and 30 seconds to record a brief personal introduction. Use this to settle your nerves and get comfortable speaking into the microphone before the scored tasks begin.</p>
+            <h3>Home Exercise</h3>
+            <p>Record a 30‑second "hello, this is me" introduction. The goal is simply to get used to talking into a microphone on a timer. Do not overthink the content — focus on speaking clearly and confidently.</p>
+            <div class="coach-tip">💡 Coach tip: Even though it is not scored, institutions may listen to this. Keep it friendly, professional, and within the time limit.</div>
+        </div>
+
+        <!-- ===== 3. READ ALOUD ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Read Aloud</h2>
+                <span class="badge badge-gold">Top Priority</span>
+            </div>
+            <div class="flex">
+                <span class="pill">30–40s prepare</span>
+                <span class="pill">read aloud in time given</span>
+            </div>
+            <p>Read an on‑screen passage aloud in the time given. This is one of the most important tasks in the entire test.</p>
+            <ul>
+                <li><strong>Scoring impact:</strong> Affects your <strong>Reading</strong> score, <strong>Speaking</strong> score, plus your <strong>pronunciation</strong> and <strong>fluency</strong> ratings.</li>
+                <li>Use the preparation time to scan the passage for tricky words and plan your pacing.</li>
+            </ul>
+            <h3>Home Exercise</h3>
+            <p>Pick a short news paragraph. Read it aloud <strong>once for practice</strong>, then <strong>once for real</strong>, timed. On the second attempt, treat it like the real test — no pauses, no restarts. Build the habit of delivering in one clean take.</p>
+            <a href="#" class="video-link">▶ Watch video guide →</a>
+            <div class="coach-tip">💡 Affects: Reading + Speaking scores · Pronunciation · Fluency — practise this task daily.</div>
+        </div>
+
+        <!-- ===== 4. REPEAT SENTENCE ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Repeat Sentence</h2>
+                <span class="badge badge-gold">Top Priority</span>
+            </div>
+            <div class="flex">
+                <span class="pill">15s to repeat after hearing once</span>
+            </div>
+            <p>Hear a sentence once, then repeat it back as accurately and fluently as possible.</p>
+            <ul>
+                <li><strong>Scoring impact:</strong> Affects both <strong>Listening</strong> and <strong>Speaking</strong> scores.</li>
+                <li><strong>Key tip:</strong> If you lose a word mid‑sentence, <strong>keep going</strong>. A smooth delivery with one missed word scores better than a broken attempt where you stop and restart.</li>
+            </ul>
+            <h3>Home Exercise</h3>
+            <p>Read random sentences from a magazine or app, then repeat them back <strong>immediately</strong>. No writing allowed — this is purely an ear‑to‑mouth exercise. The goal is to train your short‑term memory and spoken fluency together.</p>
+            <a href="#" class="video-link">▶ Watch video guide →</a>
+            <div class="coach-tip">💡 Affects: Listening + Speaking scores · Fluency matters more than perfect accuracy.</div>
+        </div>
+
+        <!-- ===== 5. DESCRIBE IMAGE ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Describe Image</h2>
+                <span class="badge badge-gold">High Priority</span>
+            </div>
+            <div class="flex">
+                <span class="pill">25s prepare</span>
+                <span class="pill">40s speak</span>
+            </div>
+            <p>Describe an image in detail — charts, graphs, photographs, maps, or diagrams.</p>
+            <ul>
+                <li><strong>Human‑reviewed:</strong> Your response is reviewed by a human scorer, so a <strong>genuine, natural description</strong> beats a memorised script every time.</li>
+                <li>Cover the key elements: title, axes, trends, notable features, and a brief conclusion.</li>
+            </ul>
+            <h3>Home Exercise</h3>
+            <p>Describe anything around you — your lounge, a photo on your phone, or even tomorrow's grocery list. Set a <strong>40‑second timer</strong> and speak continuously. The goal is to build the habit of speaking fluently for the full duration without running out of things to say.</p>
+            <a href="#" class="video-link">▶ Watch video guide →</a>
+            <div class="coach-tip">💡 Content is human‑reviewed — authenticity and structure matter more than template memorisation.</div>
+        </div>
+
+        <!-- ===== 6. RETELL LECTURE ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Retell Lecture</h2>
+                <span class="badge badge-gold">High Priority</span>
+            </div>
+            <div class="flex">
+                <span class="pill">10s prepare</span>
+                <span class="pill">40s speak</span>
+            </div>
+            <p>Listen to or watch a short lecture, then retell the main points <strong>in your own words</strong>.</p>
+            <ul>
+                <li>You do not need to capture every detail. Focus on the <strong>main idea</strong>, <strong>key supporting points</strong>, and any <strong>examples or conclusions</strong> the speaker mentions.</li>
+                <li>Use the 10‑second prep time to mentally organise what you heard before you begin speaking.</li>
+            </ul>
+            <h3>Home Exercise</h3>
+            <p>Play a <strong>2‑3 minute YouTube clip</strong> on any topic — science, history, culture, anything. After it finishes, retell the main points in <strong>40 seconds</strong>. Focus on summarising, not transcribing. Use your own words.</p>
+            <a href="#" class="video-link">▶ Watch video guide →</a>
+            <div class="coach-tip">💡 Focus on: Main idea · Key supporting points · Examples · Your own words, not the speaker's exact phrases.</div>
+        </div>
+
+        <!-- ===== 7. ANSWER SHORT QUESTION ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>Answer Short Question</h2>
+                <span class="badge badge-blue">Medium Priority</span>
+            </div>
+            <div class="flex">
+                <span class="pill">10s to answer with one word or a few words</span>
+            </div>
+            <p>Answer a short question with <strong>one word or a few words</strong>. No long explanations needed.</p>
+            <ul>
+                <li><strong>Important:</strong> This task only affects your <strong>Listening</strong> score, even though you speak your answer. There is <strong>no bonus for saying more</strong> — keep it brief and accurate.</li>
+                <li>The questions test general knowledge and common vocabulary. Speed and precision matter.</li>
+            </ul>
+            <h3>Home Exercise</h3>
+            <p>Do <strong>quick‑fire general knowledge questions</strong> with a friend or app. Answer <strong>instantly</strong> — the goal is to build reflexive response speed. Do not overthink. If you do not know, guess and move on.</p>
+            <a href="#" class="video-link">▶ Watch video guide →</a>
+            <div class="coach-tip">💡 Affects: Listening score only · Brevity is rewarded — one correct word beats a full sentence.</div>
+        </div>
+
+        <!-- ===== 8. NEW TASKS FOR 2026 ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>New Tasks for 2026</h2>
+                <span class="badge badge-turq">Summarize Group Discussion &amp; Respond to a Situation</span>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px;">
+                <!-- Summarize Group Discussion -->
+                <div style="background:#fff9e6; border-radius:6px; padding:16px 18px; border-left:4px solid var(--sunshine);">
+                    <div style="font-weight:700; font-size:18.5px;">Summarize Group Discussion</div>
+                    <span class="pill pill-gold">High Priority</span>
+                    <div class="flex" style="margin:4px 0 6px;">
+                        <span class="pill">10s prepare</span>
+                        <span class="pill">2 min speak</span>
+                    </div>
+                    <p style="font-size:15px; margin:6px 0;">Listen to three people discussing a topic, then summarize the discussion. Content is <strong>human‑reviewed</strong>. Aim for <strong>2–3 distinct viewpoints</strong> in your own words — not a word‑for‑word retelling.</p>
+                    <h4 style="font-size:15px; margin:8px 0 2px;">Home Exercise</h4>
+                    <p style="font-size:15px; margin:0 0 6px;">Play a short podcast clip with 2–3 people talking. Summarise who said what in <strong>2 minutes</strong>.</p>
+                    <a href="#" class="video-link">▶ Watch video guide →</a>
+                </div>
+
+                <!-- Respond to a Situation -->
+                <div style="background:#fff9e6; border-radius:6px; padding:16px 18px; border-left:4px solid var(--sunshine);">
+                    <div style="font-weight:700; font-size:18.5px;">Respond to a Situation</div>
+                    <span class="pill pill-gold">High Priority</span>
+                    <div class="flex" style="margin:4px 0 6px;">
+                        <span class="pill">10s prepare</span>
+                        <span class="pill">40s speak</span>
+                    </div>
+                    <p style="font-size:15px; margin:6px 0;">Read and hear a real‑life scenario, then respond as you naturally would. Content is <strong>human‑reviewed</strong>. Matching the <strong>right tone</strong> for who you are talking to matters — formal for a professor, casual for a friend.</p>
+                    <h4 style="font-size:15px; margin:8px 0 2px;">Home Exercise</h4>
+                    <p style="font-size:15px; margin:0 0 6px;">Give yourself a one‑line scenario (e.g. "you're late to meet a friend") and respond out loud as if talking to that person.</p>
+                    <a href="#" class="video-link">▶ Watch video guide →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 9. ROADMAP ===== -->
+        <div class="section-card">
+            <div class="heading">
+                <h2>What's Next — Your Four‑Day Plan</h2>
+                <span class="badge badge-blue">Roadmap</span>
+            </div>
+
+            <div class="roadmap">
+                <div class="step">
+                    <div class="day">Day 1 · Getting Your Bearings</div>
+                    <div class="desc">The map. The structure. The priorities. The warm‑up.</div>
+                </div>
+                <div class="step active">
+                    <div class="day">Day 2 · Speaking</div>
+                    <div class="desc">All 9 Speaking and Writing task types, with practice for each.</div>
+                    <span class="pill pill-gold" style="margin-top:4px;">● You are here</span>
+                </div>
+                <div class="step">
+                    <div class="day">Day 3 · Writing &amp; Reading</div>
+                    <div class="desc">Writing tasks and all 5 Reading task types, with strategies.</div>
+                </div>
+                <div class="step">
+                    <div class="day">Day 4 · Listening</div>
+                    <div class="desc">All 8 Listening task types, then mock rounds before templates or strategy.</div>
+                </div>
+            </div>
+            <div class="text-sm mt-8">Questions? That's what the coach is here for.</div>
+        </div>
+
+        <footer>Demo page · not affiliated with or endorsed by Pearson · PTE Academic 2026 — Day 2</footer>
+    </div>
+
+</body>
+</html>
